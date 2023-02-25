@@ -2,7 +2,8 @@
 
 @section('title', 'Payments Settings')
 
-@section('settings', 'c-show')
+@section('msettings-li', 'active')
+@section('msettings-open', 'show')
 @section('payssettings', 'active')
 
 @section('content')

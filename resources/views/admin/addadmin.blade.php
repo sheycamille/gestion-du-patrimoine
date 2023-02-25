@@ -2,7 +2,8 @@
 
 @section('title', 'Add Admin')
 
-@section('manage-admins', 'c-show')
+@section('madmins-li', 'active')
+@section('madmins-open', 'show')
 @section('admins', 'active')
 
 @section('content')

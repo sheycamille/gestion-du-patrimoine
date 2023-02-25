@@ -2,225 +2,291 @@
 
 @section('title', 'Admin Dashboard')
 
-@section('dashboard-li', 'selected')
+@section('dashboard-li', 'active')
 @section('dashboard', 'active')
+
 
 @section('content')
 
     @include('admin.sidebar')
-    @include('admin.topmenu')
 
-    <!-- ============================================================== -->
-    <!-- Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <div class="page-breadcrumb">
-        <div class="row">
-            <div class="col-7 align-self-center">
-                <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">@lang('message.topmenu.hi')
-                    {{ Auth::user()->name }}!</h3>
-                <div class="d-flex align-items-center">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb m-0 p-0">
-                            <li class="breadcrumb-item"><a href="/admin/dashboard" class="text-muted">Dashboard</a>
-                            </li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-            {{-- <div class="col-5 align-self-center">
-                    <div class="customize-input float-right">
-                        <select class="custom-select form-control">
-                            <option selected>Aug 19</option>
-                            <option value="1">July 19</option>
-                            <option value="2">Jun 19</option>
-                        </select>
-                    </div>
-                </div> --}}
-        </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
+    <!-- Main Content -->
+    <div id="content">
+        @include('admin.topmenu')
 
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid">
-        <!-- *************************************************************** -->
-        <!-- Start Earnings & Carousel Widget -->
-        <!-- *************************************************************** -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
 
-        <div class="fade-in">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header fw-bolder">
-                        <h1 class="text-primary pb-2">@lang('message.body.welcome') {{ Auth('admin')->User()->firstName }}
-                            {{ Auth('admin')->User()->lastName }}!</h1>
-                        <h5 id="ann" class="text-primary op-7 mb-4">{{ \App\Models\Setting::getValue('update') }}
-                        </h5>
-                    </div>
+            @if (Session::has('getAnouc') && Session::get('getAnouc') == 'true')
+                @if (\App\Models\Setting::getValue('enable_annoc') == 'on')
+                    <h5 id="ann" class="op-7 mb-4">
+                        {{ \App\Models\Setting::getValue('newupdate') }}</h5>
+                    <script type="text/javascript">
+                        var announment = $("#ann").html();
+                        console.log(announment);
+                        swal({
+                            title: "Annoucement!",
+                            text: announment,
+                            icon: "info",
+                            buttons: {
+                                confirm: {
+                                    text: "Okay",
+                                    value: true,
+                                    visible: true,
+                                    className: "btn btn-info",
+                                    closeModal: true
+                                }
+                            }
+                        });
+                    </script>
+                @endif
+                {{ session()->forget('getAnouc') }}
+            @endif
 
-                    <div class="card-body">
-                        @if (Session::has('message'))
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="alert alert-info alert-dismissable">
-                                        <button type="button" class="close" data-dismiss="alert"
-                                            aria-hidden="true">&times;</button>
-                                        <i class="fa fa-info-circle"></i>
-                                        <p class="alert-message">{!! Session::get('message') !!}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-
-                        @if (count($errors) > 0)
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="alert alert-danger alert-dismissable" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert"
-                                            aria-hidden="true">&times;</button>
-                                        @foreach ($errors->all() as $error)
-                                            <i class="fa fa-warning"></i> {{ $error }}
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
-
-                        @if (auth('admin')->user()->hasPermissionTo('system-reports', 'admin'))
-                            <!-- Beginning of  Dashboard Stats  -->
-                            <div class="row">
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-success">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                @if (!empty($total_deposited))
-                                                    {{ \App\Models\Setting::getValue('currency') }}{{ $total_deposited }}
-                                                @else
-                                                    {{ \App\Models\Setting::getValue('currency') }}0.00
-                                                @endif
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Total Deposit</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-info">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                @if (!empty($pending_deposited))
-                                                    {{ \App\Models\Setting::getValue('currency') }}{{ $pending_deposited }}
-                                                @else
-                                                    {{ \App\Models\Setting::getValue('currency') }}0.00
-                                                @endif
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Pending
-                                                Deposit(s)</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-danger">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                @if (!empty($total_withdrawn))
-                                                    {{ \App\Models\Setting::getValue('currency') }}{{ $total_withdrawn }}
-                                                @else
-                                                    {{ \App\Models\Setting::getValue('currency') }}0.00
-                                                @endif
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Total
-                                                Withdrawal</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-warning">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                @if (!empty($pending_withdrawn))
-                                                    {{ \App\Models\Setting::getValue('currency') }}{{ $pending_withdrawn }}
-                                                @else
-                                                    {{ \App\Models\Setting::getValue('currency') }}0.00
-                                                @endif
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Pending
-                                                Withdrawals</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-primary">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                <h4 class="card-title">{{ $user_count }}</h4>
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Total Users</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-danger">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                <h4 class="card-title">{{ $blockeusers }}</h4>
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Blocked Users</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="card text-white bg-success">
-                                        <div class="card-body">
-                                            <div class="text-value-lg">
-                                                <h4 class="card-title">{{ $activeusers }}</h4>
-                                            </div>
-                                            <small class="text-uppercase text-white font-weight-bold">Active Users</small>
-                                            <div class="progress progress-white progress-xs mt-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%"
-                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        @endif
+            @if (Session::has('message'))
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert alert-info alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <i class="fa fa-info-circle"></i>
+                            <p class="alert-message">{!! Session::get('message') !!}</p>
+                        </div>
                     </div>
                 </div>
+            @endif
+
+            @if (count($errors) > 0)
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert alert-danger alert-dismissable" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            @foreach ($errors->all() as $error)
+                                <i class="fa fa-warning"></i> {{ $error }}
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            @endif
+
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                <h1 class="h3 mb-0 text-gray-800">@lang('message.dashboard.dash')</h1>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row">
+                @if (auth('admin')->user()->hasPermissionTo('system-reports', 'admin'))
+                    <!-- Total Deposit Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            @lang('message.body.deposited')
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @if (!empty($total_deposited))
+                                                {{ \App\Models\Setting::getValue('currency') }}{{ $total_deposited }}
+                                            @else
+                                                {{ \App\Models\Setting::getValue('currency') }}0.00
+                                            @endif
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Deposits Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Pending Deposits
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @if (!empty($pending_deposited))
+                                                {{ \App\Models\Setting::getValue('currency') }}{{ $pending_deposited }}
+                                            @else
+                                                {{ \App\Models\Setting::getValue('currency') }}0.00
+                                            @endif
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Withdrawal Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            Total Withdrawn
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                                    @if (!empty($total_withdrawn))
+                                                        {{ \App\Models\Setting::getValue('currency') }}{{ $total_withdrawn }}
+                                                    @else
+                                                        {{ \App\Models\Setting::getValue('currency') }}0.00
+                                                    @endif
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="progress progress-sm mr-2">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-gift fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Withdrawal Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            @lang('message.body.credit')
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            @if (!empty($pending_withdrawn))
+                                                {{ \App\Models\Setting::getValue('currency') }}{{ $pending_withdrawn }}
+                                            @else
+                                                {{ \App\Models\Setting::getValue('currency') }}0.00
+                                            @endif
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-gift fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Total Users Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Total Users
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            {{ $user_count }}
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blocked Users Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Blocked Users
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            {{ $blockeusers }}
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Users Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            Active Users
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            {{ $activeusers }}
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress progress-sm mr-2">
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-gift fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
+
 @endsection

@@ -1,108 +1,103 @@
 @section('topbar')
-    <!-- ============================================================== -->
-    <!-- Topbar header - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <header class="topbar" data-navbarbg="skin1">
-        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-            <div class="navbar-header">
-                <!-- This is for the sidebar toggle which is visible on mobile only -->
-                <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
-                        class="ti-menu ti-close"></i></a>
-                <!-- ============================================================== -->
-                <!-- Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-brand">
-                    <!-- Logo icon -->
-                    <a href="/">
-                        <b class="logo-icon">
-                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            <!-- Dark Logo icon -->
-                            <img src="{{ asset('front/logo.png') }}" alt="homepage" class="logo dark-logo" />
-                            <!-- Light Logo icon -->
-                            <img src="{{ asset('front/logo.png') }}" alt="homepage" class="logo light-logo" />
-                        </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        <span class="logo-text">
-                            <!-- dark Logo text -->
-                            <img src="{{ asset('front/logo.png') }}" alt="homepage" class="dark-logo" />
-                            <!-- Light Logo text -->
-                            {{-- <img src="{{ asset('front/logo.png') }}" class="light-logo" alt="homepage" /> --}}
-                        </span>
-                    </a>
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Topbar Search -->
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                    aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Toggle which is visible on mobile only -->
-                <!-- ============================================================== -->
-                <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
-                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Logo -->
-            <!-- ============================================================== -->
-            <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin1">
-                <!-- ============================================================== -->
-                <!-- Right side toggle and nav items -->
-                <!-- ============================================================== -->
-                <ul class="navbar-nav w-100 align-items-center">
-                    <li class="nav-item ml-0 ml-md-3 ml-lg-0">
-                        <a class="nav-link search-bar" href="javascript:void(0)">
-                            <form class="my-2 my-lg-0" action="{{ route('refreshaccounts') }}">
-                                <div class="customize-input customize-input-v4">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                    <i class="form-control-icon" data-feather="search"></i>
-                                </div>
-                            </form>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <div class="col-5 d-flex align-self-center">
-                            <ul class="d-flex flex-row align-self-center text-white">
-                                <li class="breadcrumb-item text-white"><a class="text-white" href="/dashboard">Home</a></li>
-                                <?php $segments = ''; ?>
-                                @for ($i = 1; $i <= count(Request::segments()); $i++)
-                                    <?php $segments .= '/' . Request::segment($i); ?>
-                                    @if ($i < count(Request::segments()))
-                                        <li class="breadcrumb-item text-white">{{ ucfirst(Request::segment($i)) }}
-                                        </li>
-                                    @else
-                                        <li class="breadcrumb-item text-white active">{{ ucfirst(Request::segment($i)) }}
-                                        </li>
-                                    @endif
-                                @endfor
-                            </ul>
+        </form>
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            <li class="nav-item dropdown no-arrow d-sm-none">
+                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                    aria-labelledby="searchDropdown">
+                    <form class="form-inline mr-auto w-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
                         </div>
-                    </li>
-                    <li class="nav-item ml-auto">
-                        <div class="col-5 d-flex align-self-center">
-                            <ul class="d-flex flex-row align-self-center">
-                                @if (App::getLocale() == 'en')
-                                    <li><a class="btn btn-warning text-white" href="{{ route('switchlang', 'fr') }}">FR</a>
-                                    </li>
-                                    <li><a class="btn btn-danger text-white" href="{{ route('switchlang', 'es') }}">ES</a>
-                                    </li>
-                                @elseif (App::getLocale() == 'fr')
-                                    <li><a class="btn btn-success text-white" href="{{ route('switchlang', 'en') }}">EN</a>
-                                    </li>
-                                    <li><a class="btn btn-danger text-white" href="{{ route('switchlang', 'es') }}">ES</a>
-                                    </li>
-                                @else
-                                    <li><a class="btn btn-success text-white" href="{{ route('switchlang', 'en') }}">EN</a>
-                                    </li>
-                                    <li><a class="btn btn-primary text-white" href="{{ route('switchlang', 'FR') }}">FR</a>
-                                    </li>
-                                @endif
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                    </form>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <div class="col-5 d-flex align-self-center">
+                    <ul class="d-flex flex-row align-self-center text-dark">
+                        <span class="breadcrumb-item text-dark"><a class="text-dark" href="/dashboard">Home</a></span>
+                        <?php $segments = ''; ?>
+                        @for ($i = 1; $i <= count(Request::segments()); $i++)
+                            <?php $segments .= '/' . Request::segment($i); ?>
+                            @if ($i < count(Request::segments()))
+                                <span class="breadcrumb-item text-dark">{{ ucfirst(Request::segment($i)) }}
+                                </span>
+                            @else
+                                <span class="breadcrumb-item text-dark active">{{ ucfirst(Request::segment($i)) }}
+                                </span>
+                            @endif
+                        @endfor
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item ml-auto">
+                <div class="col-5 d-flex align-self-center">
+                    <ul class="d-flex flex-row align-self-center">
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Nav Item - Lang -->
+            @if (App::getLocale() == 'en')
+                <li class="nav-item no-arrow mx-1">
+                    <a class="btn btn-warning text-white" href="{{ route('switchlang', 'fr') }}">FR</a>
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <a class="btn btn-danger text-white" href="{{ route('switchlang', 'es') }}">ES</a>
+                </li>
+            @elseif (App::getLocale() == 'fr')
+                <li class="nav-item no-arrow mx-1">
+                    <a class="btn btn-success text-white" href="{{ route('switchlang', 'en') }}">EN</a>
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <a class="btn btn-danger text-white" href="{{ route('switchlang', 'es') }}">ES</a>
+                </li>
+            @else
+                <li class="nav-item no-arrow mx-1">
+                    <a class="btn btn-success text-white" href="{{ route('switchlang', 'en') }}">EN</a>
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <a class="btn btn-primary text-white" href="{{ route('switchlang', 'FR') }}">FR</a>
+                </li>
+            @endif
+
+        </ul>
+    </nav>
+
     <!-- ============================================================== -->
     <!-- End Topbar header -->
     <!-- ============================================================== -->

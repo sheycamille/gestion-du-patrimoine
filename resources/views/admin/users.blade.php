@@ -2,7 +2,8 @@
 
 @section('title', 'Manage Users')
 
-@section('musers-li', 'selected')
+@section('musers-li', 'active')
+@section('musers-open', 'show')
 @section('musers', 'active')
 
 @section('css')
@@ -64,8 +65,9 @@
                                         class="btn btn-primary btn-md mb-2">Message all</a>
                                 @endif
 
-                                @if (\App\Models\Setting::getValue('enable_kyc') == 'yes' &&
-                                    auth('admin')->user()->hasPermissionTo('mkyc-list', 'admin'))
+                                @if (
+                                    \App\Models\Setting::getValue('enable_kyc') == 'yes' &&
+                                        auth('admin')->user()->hasPermissionTo('mkyc-list', 'admin'))
                                     <a href="{{ route('kyc') }}" class="btn btn-warning btn-md mb-2">KYC</a>
                                 @endif
                             </div>
@@ -121,23 +123,25 @@
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('admin/js/jquery.validate.js') }}"></script>
-    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.validate.js') }}" defer></script>
+    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}" defer></script>
+    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}" defer></script>
     <script type="text/javascript">
-        $(function() {
-            var table = $('.yajra-datatable').DataTable({
-                order: [
-                    [7, 'desc']
-                ],
-                'pageLength': 100,
+        document.addEventListener("DOMContentLoaded", function() {
+            $(function() {
+                var table = $('.yajra-datatable').DataTable({
+                    order: [
+                        [7, 'desc']
+                    ],
+                    'pageLength': 100,
+                });
             });
-        });
 
-        function loadActions(id) {
-            $.get('users/getactions/' + id, function(data) {
-                $('#actions' + id).html(data);
-            });
-        }
+            function loadActions(id) {
+                $.get('users/getactions/' + id, function(data) {
+                    $('#actions' + id).html(data);
+                });
+            }
+        });
     </script>
 @endsection

@@ -1,170 +1,188 @@
 @section('sidebar')
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <aside class="left-sidebar" data-sidebarbg="skin6">
-        <div class="user-profile text-center pt-2">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            <div class="profile-section">
-                <p class="font-weight-light mb-0 font-18">{{ Auth::user()->name }}</p>
-                <span class="op-7 font-14"></span>
-                <div class="row border-top border-bottom mt-3 no-gutters">
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+            <img src="{{ asset('front/img/logo-white.png') }}" alt="homepage" class="logo light-logo" width="150px" />
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item @yield('dashboard-li')">
+            <a class="nav-link @yield('dashboard')" href="{{ route('dashboard') }}" aria-expanded="false">
+                <i data-feather="home" class="fas fa-fw fa-tachometer-alt"></i>
+                <span class="hide-menu">@lang('message.dashboard.dash')</span>
+            </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Trading Accounts
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item @yield('accounts-li')">
+            <a class="nav-link collapsed  @yield('accounts-li')" href="#" data-toggle="collapse" data-target="#collapseTA"
+                aria-expanded="true" aria-controls="collapseTA">
+                <i class="fas fa-fw fa-wallet"></i>
+                <span>@lang('message.dashboard.trade')</span>
+            </a>
+            <div id="collapseTA" class="collapse @yield('accounts-open')" aria-labelledby="headingTwo"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">@lang('message.dashboard.trade'):</h6>
+                    <a class="collapse-item @yield('laccounts')"
+                        href="{{ route('account.liveaccounts') }}">@lang('message.dashboard.live')</a>
+                    <a class="collapse-item @yield('daccounts')"
+                        href="{{ route('account.demoaccounts') }}">@lang('message.dashboard.demo')</a>
                 </div>
             </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Money
         </div>
 
-        <div class="scroll-sidebar" data-sidebarbg="skin6">
-            <nav class="sidebar-nav">
-                <ul id="sidebarnav">
-                    <li class="nav-small-cap"><span class="hide-menu">Menu</span></li>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item @yield('dw-li')">
+            <a class="nav-link collapsed  @yield('dw-li')" href="#" data-toggle="collapse"
+                data-target="#collapseDW" aria-expanded="true" aria-controls="collapseDW">
+                <i class="fas fa-fw fa-dollar-sign"></i>
+                <span>@lang('message.dashboard.deposits')</span>
+            </a>
+            <div id="collapseDW" class="collapse @yield('dw-open')" aria-labelledby="headingTwo"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">@lang('message.dashboard.deposits'):</h6>
+                    <a class="collapse-item @yield('deposits')"
+                        href="{{ route('account.deposits') }}">@lang('message.dashboard.depo')</a>
+                    <a class="collapse-item @yield('withdrawals')"
+                        href="{{ route('account.withdrawals') }}">@lang('message.dashboard.with')</a>
+                </div>
+            </div>
+        </li>
 
-                    <li class="sidebar-item @yield('dashboard-li')">
-                        <a class="sidebar-link sidebar-link @yield('dashboard')" href="{{ route('dashboard') }}"
-                            aria-expanded="false">
-                            <i data-feather="home" class="feather-icon"></i>
-                            <span class="hide-menu">@lang('message.dashboard.dash')</span>
-                        </a>
-                    </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
 
-                    <li class="sidebar-item @yield('accounts-li')">
-                        <div class="dropdown sub-dropdown">
-                            <a class="sidebar-link sidebar-link @yield('accounts-li')" data-toggle="dropdown" href="#"
-                                aria-expanded="false" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="grid" class="feather-icon"></i>
-                                <span class="hide-menu">@lang('message.dashboard.trade')</span>
-                                <span class="badge rounded-circle profile-dd text-center mt-2"><i
-                                        class="fas fa-angle-down"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item @yield('laccounts')" href="{{ route('account.liveaccounts') }}">
-                                    <i class="fas fa-circle text-success font-12 mr-2"></i>
-                                    @lang('message.dashboard.live')
-                                </a>
-                                <a class="dropdown-item @yield('daccounts')" href="{{ route('account.demoaccounts') }}">
-                                    <i class="fas fa-circle text-warning font-12 mr-2"></i>
-                                    @lang('message.dashboard.demo')
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="sidebar-item @yield('dw-li')">
-                        <div class="dropdown sub-dropdown">
-                            <a class="sidebar-link sidebar-link @yield('accounts')" data-toggle="dropdown" href="#"
-                                aria-expanded="false" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="dollar-sign" class="dollar-sign-icon"></i>
-                                <span class="hide-menu">@lang('message.dashboard.deposits')</span>
-                                <span class="badge rounded-circle profile-dd text-center mt-2"><i
-                                        class="fas fa-angle-down"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item @yield('deposits')" href="{{ route('account.deposits') }}">
-                                    <i class="fas fa-circle text-success font-12 mr-2"></i>
-                                    @lang('message.dashboard.depo')
-                                </a>
-                                <a class="dropdown-item @yield('withdrawals')" href="{{ route('account.withdrawals') }}">
-                                    <i class="fas fa-circle text-warning font-12 mr-2"></i>
-                                    @lang('message.dashboard.with')
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="sidebar-item @yield('downloads-li')">
-                        <a class="sidebar-link sidebar-link @yield('downloads')" href="{{ route('account.downloads') }}"
-                            aria-expanded="false">
-                            <i data-feather="download" class="download-icon"></i>
-                            <span class="hide-menu">@lang('message.dashboard.down')</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item @yield('support-li')">
-                        <a class="sidebar-link sidebar-link @yield('support')" href="{{ route('account.support') }}"
-                            aria-expanded="false">
-                            <i data-feather="help-circle" class="help-circle-icon"></i>
-                            @lang('message.dashboard.sup')
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item @yield('profile-li')">
-                        <div class="dropdown sub-dropdown">
-                            <a class="sidebar-link sidebar-link @yield('profile') @yield('changepassword') @yield('security') @yield('support') @yield('winfo') @yield('notifications')"
-                                data-toggle="dropdown" href="#" aria-expanded="false" type="button"
-                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="user" class="user-icon"></i>
-                                <span class="hide-menu">@lang('message.dashboard.my_pfl')</span>
-                                <span class="badge rounded-circle profile-dd text-center mt-2"><i
-                                        class="fas fa-angle-down"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item @yield('profile')" href="{{ route('account.profile') }}">
-                                    <i class="fas fa-circle text-primary font-12 mr-2"></i>
-                                    @lang('message.dashboard.update_pfl')
-                                </a>
-                                <a class="dropdown-item @yield('cpassword')" href="{{ route('changepassword') }}">
-                                    <i class="fas fa-circle text-warning font-12 mr-2"></i>
-                                    @lang('message.topmenu.chg_pss')
-                                </a>
-                                <a class="dropdown-item @yield('security')" href="{{ route('account.security') }}">
-                                    <i class="fas fa-circle text-success font-12 mr-2"></i>
-                                    @lang('message.dashboard.sec')
-                                </a>
-                                <a class="dropdown-item @yield('winfo')" href="{{ route('withdrawaldetails') }}">
-                                    <i class="fas fa-circle text-primary font-12 mr-2"></i>
-                                    @lang('message.dashboard.with_info')
-                                </a>
-                                <a class="dropdown-item @yield('notifications')" href="{{ route('notifications') }}">
-                                    <i class="fas fa-circle font-12 mr-2"></i>
-                                    @lang('message.dashboard.notif')
-                                </a>
-                                <a class="dropdown-item @yield('referrals')" href="{{ route('referrals') }}">
-                                    <i class="fas fa-circle font-12 mr-2"></i>
-                                    @lang('message.dashboard.my_referrals')
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="sidebar-item @yield('kyc-li')">
-                        <div class="dropdown sub-dropdown">
-                            <a class="sidebar-link sidebar-link @yield('kyc')" data-toggle="dropdown" href="#"
-                                aria-expanded="false" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i data-feather="shield" class="shield-icon"></i>
-                                <span class="hide-menu">KYC</span>
-                                <span class="badge rounded-circle profile-dd text-center mt-2"><i
-                                        class="fas fa-angle-down"></i></span>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#" onclick="event.preventDefault();">
-                                    KYC Status: {{ Auth::user()->account_verify }}
-                                </a>
-
-                                @if (Auth::user()->account_verify != 'Verified')
-                                    <a class="dropdown-item @yield('kyc')" href="{{ route('account.verify') }}">
-                                        <i class="fas fa-circle text-warning font-12 mr-2"></i>
-                                        Verify Account
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="sidebar-item @yield('support-li')">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                            <i data-feather="log-out" class="log-out-icon"></i>
-                            @lang('message.topmenu.log')
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
-                    </li>
-
-                </ul>
-            </nav>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            KYC
         </div>
-    </aside>
+
+        <li class="nav-item @yield('kyc-li')">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKYC"
+                aria-expanded="true" aria-controls="collapseKYC">
+                <i class="fas fa-fw fa-lock"></i>
+                <span>KYC</span>
+            </a>
+            <div id="collapseKYC" class="collapse @yield('kyc-open')" aria-labelledby="headingKYC"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="#" onclick="event.preventDefault();">KYC Status:
+                        {{ Auth::user()->account_verify ? Auth::user()->account_verify : 'Not Verified' }}</a>
+                    <a class="collapse-item @yield('kyc')" href="{{ route('account.verify') }}">Verify Account</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Account
+        </div>
+
+        <li class="nav-item @yield('profile-li')">
+            <a class="nav-link collapsed @yield('profile') @yield('changepassword') @yield('security') @yield('support') @yield('winfo') @yield('notifications')"
+                href="#" data-toggle="collapse" data-target="#collapseAccount" aria-expanded="true"
+                aria-controls="collapseAccount">
+                <i class="fas fa-fw fa-user"></i>
+                <span>@lang('message.dashboard.my_pfl')</span>
+            </a>
+            <div id="collapseAccount" class="collapse @yield('profile-open')" aria-labelledby="headingAccount"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">My Account:</h6>
+                    <a class="collapse-item @yield('profile')" href="{{ route('account.profile') }}">@lang('message.dashboard.update_pfl')</a>
+                    <a class="collapse-item @yield('cpassword')" href="{{ route('changepassword') }}">@lang('message.topmenu.chg_pss')</a>
+                    {{-- <a class="collapse-item @yield('security')" href="{{ route('account.security') }}">@lang('message.dashboard.sec')</a> --}}
+                    <a class="collapse-item @yield('winfo')"
+                        href="{{ route('withdrawaldetails') }}">@lang('message.dashboard.with_info')</a>
+                    <a class="collapse-item @yield('notifications')" href="{{ route('notifications') }}">@lang('message.dashboard.notif')</a>
+                    <a class="collapse-item @yield('referrals')" href="{{ route('referrals') }}">@lang('message.dashboard.my_referrals')</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Tools
+        </div>
+
+        <li class="nav-item @yield('downloads-li')">
+            <a class="nav-link @yield('downloads')" href="{{ route('account.downloads') }}" aria-expanded="false">
+                <i class="fas fa-fw fa-download"></i>
+                <span>@lang('message.dashboard.down')</span>
+            </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Help
+        </div>
+
+        <li class="nav-item @yield('support-li')">
+            <a class="nav-link @yield('support')" href="{{ route('account.support') }}" aria-expanded="false">
+                <i class="fas fa-fw fa-question"></i>
+                <span>@lang('message.dashboard.sup')</span>
+            </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Logout
+        </div>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                <i class="fas fa-fw fa-sign-out-alt"></i>
+                <span>@lang('message.topmenu.log')</span>
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
+    <!-- End of Sidebar -->
 @endsection

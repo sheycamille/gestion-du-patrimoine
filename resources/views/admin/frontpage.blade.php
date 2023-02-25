@@ -2,7 +2,8 @@
 
 @section('title', 'Manage Site Frontend')
 
-@section('settings', 'c-show')
+@section('settings', 'active')
+@section('settings-open', 'show')
 @section('frontend-control', 'active')
 
 @section('content')

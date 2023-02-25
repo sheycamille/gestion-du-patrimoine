@@ -2,7 +2,8 @@
 
 @section('title', 'Manage admins')
 
-@section('manage-admins', 'c-show')
+@section('madmins-li', 'active')
+@section('madmins-open', 'show')
 @section('admins', 'active')
 
 @section('content')
@@ -87,57 +88,59 @@
 @endsection
 
 @section('javascript')
-    <script src="{{ asset('admin/js/jquery.validate.js') }}"></script>
-    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.validate.js') }}" defer></script>
+    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}" defer></script>
+    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}" defer></script>
     <script type="text/javascript">
-        $(function() {
+        document.addEventListener("DOMContentLoaded", function() {
+            $(function() {
 
-            var table = $('.yajra-datatable').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ route('fetchadmin') }}",
-                columns: [{
-                        data: 'id',
-                        name: 'ID'
-                    },
-                    {
-                        data: 'firstName',
-                        name: 'Firstname'
-                    },
-                    {
-                        data: 'lastName',
-                        name: 'Lastname'
-                    },
-                    {
-                        data: 'email',
-                        name: 'Email'
-                    },
-                    {
-                        data: 'phone',
-                        name: 'Phome'
-                    },
-                    {
-                        data: 'type',
-                        name: 'Type'
-                    },
-                    {
-                        data: 'status',
-                        name: 'Status'
-                    },
-                    {
-                        data: 'role',
-                        name: 'Role'
-                    },
-                    {
-                        data: 'action',
-                        name: 'Action',
-                        orderable: true,
-                        searchable: true
-                    },
-                ]
+                var table = $('.yajra-datatable').DataTable({
+                    processing: true,
+                    serverSide: true,
+                    ajax: "{{ route('fetchadmin') }}",
+                    columns: [{
+                            data: 'id',
+                            name: 'ID'
+                        },
+                        {
+                            data: 'firstName',
+                            name: 'Firstname'
+                        },
+                        {
+                            data: 'lastName',
+                            name: 'Lastname'
+                        },
+                        {
+                            data: 'email',
+                            name: 'Email'
+                        },
+                        {
+                            data: 'phone',
+                            name: 'Phome'
+                        },
+                        {
+                            data: 'type',
+                            name: 'Type'
+                        },
+                        {
+                            data: 'status',
+                            name: 'Status'
+                        },
+                        {
+                            data: 'role',
+                            name: 'Role'
+                        },
+                        {
+                            data: 'action',
+                            name: 'Action',
+                            orderable: true,
+                            searchable: true
+                        },
+                    ]
+                });
+
             });
-
         });
     </script>
 @endsection

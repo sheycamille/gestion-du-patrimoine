@@ -4,55 +4,57 @@
 
 @section('content')
 
-    <p class="uk-text-lead uk-margin-top uk-margin-remove-bottom">@lang('message.login.lgn')</p>
-    <p class="uk-text-small uk-margin-remove-top uk-margin-medium-bottom">
-        @lang('message.login.new')
-        <a href="{{ route('register') }}">@lang('message.login.newa')</a>
-    </p>
-
-    <div class="mb-4 text-center">
-        @if (Session::has('status'))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: auto;">
-                {{ session('status') }}
+    <div class="col-lg-6">
+        <div class="p-5">
+            <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-4">@lang('message.welcome_back')</h1>
             </div>
-        @endif
+            <form class="user" action="{{ route('login') }}" method="post">
+                @csrf
+                <div class="mb-4 text-center">
+                    @if (Session::has('status'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: auto;">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                </div>
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+                <div class="form-group">
+                    <input type="email" class="form-control form-control-user"
+                        aria-describedby="emailHelp" placeholder="Enter Email Address..."  name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control form-control-user" name="password" id="password"
+                        placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox small">
+                        <input type="checkbox" class="custom-control-input" id="customCheck" name="remember_me">
+                        <label class="custom-control-label" for="customCheck">@lang('message.login.rmbr')</label>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-user btn-block">
+                    @lang('message.login.sign_in')
+                </button>
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" href="{{ route('password.request') }}">@lang('message.login.frgt')</a>
+            </div>
+            <div class="text-center">
+                <a class="small" href="{{ route('register') }}">@lang('message.login.newa')</a>
+            </div>
+        </div>
     </div>
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    <!-- form begin -->
-    <form class="uk-grid uk-form" action="{{ route('login') }}" method="post">
-        @csrf
-        <div class="uk-margin-small uk-width-1-1 uk-inline">
-            <span class="uk-form-icon uk-form-icon-flip fas fa-user fa-sm"></span>
-            <input name="email" class="uk-input uk-border-rounded" id="email" value="" type="text"
-                placeholder="email@gmail.com">
-        </div>
-        <div class="uk-margin-small uk-width-1-1 uk-inline">
-            <span class="uk-form-icon uk-form-icon-flip fas fa-lock fa-sm"></span>
-            <input name="password" class="uk-input uk-border-rounded" id="password" value="" type="password"
-                placeholder="Password">
-        </div>
-        <div class="uk-margin-small uk-width-auto uk-text-small">
-            <label><input class="uk-checkbox uk-border-rounded" type="checkbox"> @lang('message.login.rmbr')</label>
-        </div>
-        <div class="uk-margin-small uk-width-expand uk-text-small">
-            <label class="uk-align-right"><a class="uk-link-reset"
-                    href="{{ route('password.request') }}">@lang('message.login.frgt')</a></label>
-        </div>
-        <div class="uk-margin-small uk-width-1-1">
-            <button class="uk-button uk-width-1-1 uk-button-primary uk-border-rounded uk-float-left" type="submit"
-                name="submit">@lang('message.login.sign_in')</button>
-        </div>
-    </form>
-    <!-- form end -->
 
 @endsection

@@ -2,7 +2,7 @@
 
 @section('title', 'Interac Payment')
 
-@section('dw-li', 'selected')
+@section('dw-li', 'active')
 @section('deposits', 'active')
 
 @section('content')

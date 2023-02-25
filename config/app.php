@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Moneta Market'),
+    'name' => env('APP_NAME', 'Gestion du Patrimoine'),
 
     /*
     |--------------------------------------------------------------------------

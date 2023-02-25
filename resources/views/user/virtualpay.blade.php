@@ -2,7 +2,8 @@
 
 @section('title', 'ChargeMoney Payment')
 
-@section('dw-li', 'selected')
+@section('dw-li', 'active')
+@section('dw-open', 'show')
 @section('deposits', 'active')
 
 @section('content')
@@ -133,7 +134,7 @@
                                                                 <input type="hidden" name="REQUESTID"
                                                                     value="{{ Auth::user()->id . time() }}">
                                                                 <input type="hidden" name="MID"
-                                                                    value="{{ config('virtualpay.demo_mid', 'MonetaMarket') }}">
+                                                                    value="{{ config('virtualpay.demo_mid', 'GestionduPatrimione') }}">
                                                                 <input type="hidden" name="API_KEY"
                                                                     value="{{ config('virtualpay.demo_api_key') }}">
                                                                 <input type="hidden" name="PRIVATE_KEY"

@@ -2,7 +2,8 @@
 
 @section('title', 'My Referrals')
 
-@section('profile-li', 'selected')
+@section('profile-li', 'active')
+@section('profile-open', 'show')
 @section('referrals', 'active')
 
 @section('content')

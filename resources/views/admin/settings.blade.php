@@ -2,7 +2,8 @@
 
 @section('title', 'Site Information Settings')
 
-@section('settings', 'c-show')
+@section('msettings-li', 'active')
+@section('msettings-open', 'show')
 @section('siteinfo', 'active')
 
 @section('content')

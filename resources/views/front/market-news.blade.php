@@ -35,7 +35,7 @@
                                     <div class="uk-card-body">
                                         <h1>
                                             Forex & Financial News and
-                                            Moneta Market Analytics
+                                            Gestion du Patrimoine Analytics
                                         </h1>
                                     </div>
                                 </article>

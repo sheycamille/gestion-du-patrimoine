@@ -2,6 +2,10 @@
 
 @section('title', 'Change Password')
 
+@section('profile-li', 'active')
+@section('profile-open', 'show')
+@section('changepass', 'active')
+
 @section('content')
 
 @include('admin.topmenu')

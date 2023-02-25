@@ -32,7 +32,7 @@ return [
         'trading_guides' => 'Guides de trading',
         'fast_execu' => 'Exécution rapide',
         'commission' => 'Commissions',
-        'why_us' => 'Pourquoi Moneta Market est un courtier FX de confiance?',
+        'why_us' => 'Pourquoi Gestion du Patrimoine est un courtier FX de confiance?',
         'why_us_text' => 'Avec plus de 15 ans d\'excellence et d\'innovation, nous fournissons un accès de haute qualité aux marchés financiers, grâce à notre modèle d\'exécution avancé. Découvrez le monde du trading en ligne avec des CFDs sur des milliers d\'instruments dans 6 classes d\'actifs.',
         'wide_range' => 'Large gamme d\'instruments de trading',
         'unparalleled_conditions' => 'Conditions de trading inégalées',
@@ -68,8 +68,8 @@ return [
         'profile' => 'profil',
         'logout' => 'Déconnexion',
         'home' => 'Accueil',
-        'gestiondupatrimoine_group' => 'Moneta Market 2022.',
-        'powered' => 'Réalisé par le groupe Moneta Market.',
+        'gestiondupatrimoine_group' => 'Gestion du Patrimoine 2022.',
+        'powered' => 'Réalisé par le groupe Gestion du Patrimoine.',
     ],
     'forex' => [
         'forex_trading' => 'Commerce du Forex',
@@ -114,11 +114,11 @@ return [
     ],
     'webtrader' => [
         'webtrader_title1' => 'Plate-forme de négociation',
-        'webtrader_title2' => 'Moneta Market WebTrader',
+        'webtrader_title2' => 'Gestion du Patrimoine WebTrader',
         'webtrader_platform' => "Notre plateforme WebTrader est en train de devenir l'une des plus populaires auprès des traders.
         les traders, car elle offre un niveau supplémentaire d'analyse du marché et un accès à une
         l'accès à une profondeur de marché complète sur une interface utilisateur impressionnante et entièrement personnalisable.
-        En plus de l'infrastructure de négociation avancée d'Moneta Market, des prix compétitifs et une exécution supérieure des ordres sans intervention du pupitre de négociation.
+        En plus de l'infrastructure de négociation avancée d'Gestion du Patrimoine, des prix compétitifs et une exécution supérieure des ordres sans intervention du pupitre de négociation.
         l'exécution supérieure des ordres sans intervention du pupitre de négociation*, notre WebTrader
         offre l'une des expériences de trading les plus innovantes du secteur." ,
         'trde_cdfs' => ' NÉGOCIER LES CFDS SUR
@@ -157,7 +157,7 @@ return [
         'intergrated_calender' => 'Calendrier économique intégré',
         'dom' => 'DOM(Profondeur du marché)',
         'win_mac' => 'Disponible pour Windows ou Mac',
-        'download' => "Téléchargez-le gratuitement pour profiter de tous les avantages qu'il a à offrir en conjonction avec le compte de trading Moneta Market Tradre 7",
+        'download' => "Téléchargez-le gratuitement pour profiter de tous les avantages qu'il a à offrir en conjonction avec le compte de trading Gestion du Patrimoine Tradre 7",
         'for_win' => 'Télécharger Tradre 7 pour Windows',
         'for_mac' => 'Télécharger Tradre 7 pour Mac',
         'system_req' => 'Configuration requise',
@@ -212,13 +212,13 @@ return [
     ],
     'about' => [
         'about_pt1' => 'À propos du groupe',
-        'about_pt2' => 'Moneta Market',
-        'fsa' => "Moneta Market est autorisé par la FSA de SVG en 2021 à agir en tant qu'intermédiaire financier et monétaire dans la conduite d'activités de courtage financier et monétaire pour la vente et l'achat de devises et l'intermédiation dans des opérations de marquage de l'argent et comme autorisé avec le numéro de société 678 SVG.t",
+        'about_pt2' => 'Gestion du Patrimoine',
+        'fsa' => "Gestion du Patrimoine est autorisé par la FSA de SVG en 2021 à agir en tant qu'intermédiaire financier et monétaire dans la conduite d'activités de courtage financier et monétaire pour la vente et l'achat de devises et l'intermédiation dans des opérations de marquage de l'argent et comme autorisé avec le numéro de société 678 SVG.t",
         'our_clients_first' => 'Faire passer nos clients en premier',
         'since' => 'depuis 2016',
         'empowering_clients' => 'Depuis environ 5 ans, nous responsabilisons nos clients en les aidant à prendre le contrôle de leur vie financière',
         'strategy' => 'Notre stratégie',
-        'aim' => 'Chez Moneta Market, nous évoluons avec notre temps. Nous visons à affiner continuellement nos services pour répondre aux besoins des traders dans ce secteur très dynamique',
+        'aim' => 'Chez Gestion du Patrimoine, nous évoluons avec notre temps. Nous visons à affiner continuellement nos services pour répondre aux besoins des traders dans ce secteur très dynamique',
         'ultra_fast' => 'Exécution ultra-rapide des transactions sans intervention du dealing desk',
         'aggregation' => 'Agrégation des prix de plusieurs LPs et accès à un pool de liquidité profond',
         'research' => 'Recherche et développement continus',
@@ -236,7 +236,7 @@ return [
         'since_2016' => 'en premier depuis 2016',
         'subtitle' => 'Depuis plus de 6 ans, nous responsabilisons nos clients en les aidant à prendre le contrôle de leur vie financière.',
         'philosophy' => 'Notre philosophie',
-        'phil_text' => 'Chez Moneta Market, nous nous efforçons d\'apporter des produits innovants à nos clients. Nous affinons continuellement nos services afin de répondre aux besoins des traders dans ce secteur très dynamique.',
+        'phil_text' => 'Chez Gestion du Patrimoine, nous nous efforçons d\'apporter des produits innovants à nos clients. Nous affinons continuellement nos services afin de répondre aux besoins des traders dans ce secteur très dynamique.',
         'our_vision' => 'Notre Vision',
         'vision_text' => 'Notre vision est de fournir un marché libre et large où même l\'investisseur de base peut gagner de l\'argent sur les marchés financiers. de l\'argent sur les marchés financiers.',
         'culture' => 'Notre Culture',
@@ -266,10 +266,10 @@ return [
     'security' => [
         'staying_safe' => 'Rester en sécurité en ligne',
         'online_security' => 'Informations importantes sur la sécurité en ligne',
-        'safety' => 'Chez Moneta Market, la sécurité des données des clients est une priorité et nous avons mis en place des mesures de sécurité sophistiquées destinées à protéger vos informations personnelles, votre vie privée et vos fonds',
+        'safety' => 'Chez Gestion du Patrimoine, la sécurité des données des clients est une priorité et nous avons mis en place des mesures de sécurité sophistiquées destinées à protéger vos informations personnelles, votre vie privée et vos fonds',
         'high_encryption' => 'Nous utilisons les niveaux les plus élevés de cryptage des données sur nos sites web et nos applications',
         'strong_team' => 'Une solide équipe de professionnels surveille en permanence et est toujours prête à réagir à tout incident ou activité irrégulière dans les paiements en ligne',
-        'control' => "Nous prenons toutes les mesures nécessaires pour que le portail l'Moneta Market Direct soit un lieu sûr pour l'exécution de vos transactions",
+        'control' => "Nous prenons toutes les mesures nécessaires pour que le portail l'Gestion du Patrimoine Direct soit un lieu sûr pour l'exécution de vos transactions",
         'password' => "Les mots de passe doivent être d'une certaine complexité et d'une certaine longueur",
         'update' => "Pour toute demande de mise à jour des informations personnelles/traitement de l'une de vos données personnelles, nous vérifierons que vous avez fait cette demande avant d'entreprendre toute action",
         'two_step' => 'Option de vérification en 2 étapes',
@@ -298,31 +298,31 @@ return [
         'disclose_pt1' => "Ne partagez jamais votre/vos mot(s) de passe ou les informations sensibles de votre compte avec quiconque, et ne notez jamais vos mots de passe ou codes d'accès.
         ou codes d'accès. Méfiez-vous de tout contact vous demandant de fournir des détails sur votre compte ou des informations personnelles telles que
          votre identifiant",
-        'disclose_pt2' => "Moneta Market et d'autres sociétés de bonne réputation ne demanderont jamais de tels détails et vous devez considérer comme suspect tout contact ou demande de ce type.
+        'disclose_pt2' => "Gestion du Patrimoine et d'autres sociétés de bonne réputation ne demanderont jamais de tels détails et vous devez considérer comme suspect tout contact ou demande de ce type.
         tout contact ou demande de ce type comme étant suspect",
         'easy' => 'Ne rendez pas les choses faciles',
         'easy_pt1' => "Il est parfois facile pour les fraudeurs d'utiliser un mot de passe, simplement parce qu'il n'est pas assez complexe ou qu'il n'est pas changé. Changez votre
         mot(s) de passe fréquemment et utilisez une combinaison de symboles, de chiffres, de lettres majuscules et minuscules. N'utilisez pas
         utilisez pas de mots de passe contenant des noms de famille, des animaux domestiques ou des surnoms, car ils sont facilement devinables. Utilisez différents
          mots de passe pour différents sites web et activez l'authentification multifactorielle chaque fois que possible.",
-        'for_clarity' => "Pour plus de clarté, nous tenons à souligner qu'Moneta Market ",
+        'for_clarity' => "Pour plus de clarté, nous tenons à souligner qu'Gestion du Patrimoine ",
         'clarity_pt1' => "Ne fournit pas l'échange physique de, ou des services de paiement relatifs aux crypto-monnaies",
         'clarity_pt2' => "Ne vous demandera jamais votre (vos) mot(s) de passe ou d'autres informations sensibles",
-        'clarity_pt3' => "Ne vous demandera jamais d'effectuer des transferts vers et depuis votre compte. N'effectuez des paiements que via notre portail Moneta Market Direct",
+        'clarity_pt3' => "Ne vous demandera jamais d'effectuer des transferts vers et depuis votre compte. N'effectuez des paiements que via notre portail Gestion du Patrimoine Direct",
         'clarity_pt4' => "Ne s'engage pas à donner des conseils en matière d'investissement ou de commerce",
         'clarity_pt5' => "Les services ne comprennent pas la gestion d'actifs ni la garantie d'un quelconque retour sur investissement",
         'fraud_pt1' => "Signalez immédiatement tout soupçon de fraude à l'agence de lutte contre la fraude en matière de cybersécurité ou aux autorités compétentes de votre juridiction",
-        'fraud_pt2' => "Si vous recevez des appels, des e-mails ou des SMS non sollicités se réclamant d'Moneta Market, ne vous engagez dans aucune communication et signalez-le nous immédiatement via nos canaux de communication officiels sur notre site web",
+        'fraud_pt2' => "Si vous recevez des appels, des e-mails ou des SMS non sollicités se réclamant d'Gestion du Patrimoine, ne vous engagez dans aucune communication et signalez-le nous immédiatement via nos canaux de communication officiels sur notre site web",
         'fraud_pt3' => "Veuillez également nous informer si vous remarquez des transactions non autorisées sur votre compte ou si vous soupçonnez qu'un tiers peut avoir accès aux informations de votre compte",
         'we_remind_you' => "Nous vous rappelons de vous méfier des canaux de communication non autorisés et de ne pas divulguer de données personnelles ou d'informations de compte sensibles sur les médias sociaux",
-        'we_remind_you_pt2' => "L'application mobile officielle de Moneta Market peut être téléchargée uniquement depuis l'App Store d'Apple et la boutique Google Play. D'autres logiciels de trading officiels fournis par nos soins sont disponibles dans notre centre de téléchargement",
+        'we_remind_you_pt2' => "L'application mobile officielle de Gestion du Patrimoine peut être téléchargée uniquement depuis l'App Store d'Apple et la boutique Google Play. D'autres logiciels de trading officiels fournis par nos soins sont disponibles dans notre centre de téléchargement",
         'we_remind_you_pt3' => "Veuillez vous assurer que vous utilisez uniquement des applications et des logiciels provenant de sources officielles. Si vous avez des doutes sur une application ou un canal de médias sociaux et que vous souhaitez en vérifier l'authenticité, veuillez nous contacter via l'un de nos canaux de communication officiels, que vous trouverez sur notre page de contacts.",
 
     ],
     'trading_platforms' => [
         'o_t_p' => 'Nos plateformes de négociation',
         'advanced_platform' => 'La plateforme la plus avancée au monde',
-        'more_features' => "Profitez de plus de fonctionnalités avec la plateforme de trading Trader7 d'Moneta Market. Moneta Market Trader7 est la plateforme Tradre 7 la plus récente et la plus avancée. Elle offre toutes les fonctions pionnières de MT4, avec en plus des outils de trading et des indicateurs plus avancés qui permettent aux traders de mieux contrôler leurs transactions et de prendre des décisions plus éclairées en utilisant des analyses de pointe.",
+        'more_features' => "Profitez de plus de fonctionnalités avec la plateforme de trading Trader7 d'Gestion du Patrimoine. Gestion du Patrimoine Trader7 est la plateforme Tradre 7 la plus récente et la plus avancée. Elle offre toutes les fonctions pionnières de MT4, avec en plus des outils de trading et des indicateurs plus avancés qui permettent aux traders de mieux contrôler leurs transactions et de prendre des décisions plus éclairées en utilisant des analyses de pointe.",
         'benefits' => 'Avantages et bénéfices',
         'lates_platform' => "La dernière plateforme Tradre 7 offre un certain nombre d'outils analytiques et de fonctions supplémentaires conçus pour vous offrir un arsenal de négociation plus complet et une expérience améliorée, ce qui en fait l'une des meilleures plateformes disponibles sur le marché.",
         'mobile_apps' => 'Applications mobiles',
@@ -343,6 +343,7 @@ return [
     ],
     'dashboard' => [
         'dash' => 'Tableau de bord',
+        'update_balances' => 'Mise à jour des soldes',
         'my_act' => 'Mon compte',
         'my_pfl' => 'Mon profil',
         'update_pfl' => 'Mise à jour du profil',
@@ -372,9 +373,9 @@ return [
     ],
     'privacy_policy' => [
         'policy' => 'Politique de confidentialité',
-        'b1' => "Moneta Market cherche toujours à améliorer l'expérience de ses clients à plus d'un titre et, dans un effort pour créer et gérer tous les comptes de trading de ses clients, la société aura besoin d'un système de gestion des comptes.
+        'b1' => "Gestion du Patrimoine cherche toujours à améliorer l'expérience de ses clients à plus d'un titre et, dans un effort pour créer et gérer tous les comptes de trading de ses clients, la société aura besoin d'un système de gestion des comptes.
         et dans un effort pour créer et gérer chaque compte de trading de nos clients, la société devra avoir
-        d'accéder à certaines informations nécessaires. La politique de protection de la vie privée indique comment Moneta Market
+        d'accéder à certaines informations nécessaires. La politique de protection de la vie privée indique comment Gestion du Patrimoine
          s'engage à assumer ses responsabilités pour obtenir et protéger la vie privée des clients et
         s'assurer que les informations qu'ils ont fournies restent confidentielles ",
         'personal' => 'Informations personnelles',
@@ -401,7 +402,7 @@ return [
         nom d'utilisateur et mot de passe personnels.",
         'b9' => "Prévention contre la fraude, le blanchiment d'argent ou les transactions non autorisées. ",
         'security' => 'Sécurité',
-        'cookies' => 'Cookies sur MonetaMarket.ca',
+        'cookies' => 'Cookies sur GestionduPatrimione.net',
         'b10' => "Les données et les informations que l'entreprise a recueillies et rassemblées sont toutes cryptées et sont mises
         stockées dans des systèmes informatiques sécurisés afin d'éviter tout accès non autorisé, toute modification abusive,
         l'utilisation abusive ou la perte d'informations. Dans l'éventualité où vous souhaiteriez fermer votre compte auprès de la
@@ -435,30 +436,30 @@ return [
         'order' => "Politique d'exécution des commandes",
         'order_pol' => "La politique d'ordre d'exécution",
         'b1' => "L'unique objectif de cette politique d'ordre d'exécution est d'établir un plan d'action bien organisé pour
-        le processus d'approvisionnement en fournissant le meilleur résultat possible à ses clients, tout en permettant à Moneta Market d'exécuter les commandes de ses clients.
-        Moneta Market exécute les commandes de ses clients.",
+        le processus d'approvisionnement en fournissant le meilleur résultat possible à ses clients, tout en permettant à Gestion du Patrimoine d'exécuter les commandes de ses clients.
+        Gestion du Patrimoine exécute les commandes de ses clients.",
         'b2' => 'En outre, le but de ce document est de guider lesdites activités et de vérifier la conformité
         aux nécessités des organes législatifs, en comptant le développement départemental et général, qui sont
         général, qui sont établies dans le Manuel de procédures internes. ',
         'scope' => 'Portée et services',
         'b3' => "La politique s'applique automatiquement à la réalisation des transactions pour le compte de ses clients.
-        Moneta Market sera toujours la contrepartie principale au fur et à mesure de l'exécution des ordres des clients.
+        Gestion du Patrimoine sera toujours la contrepartie principale au fur et à mesure de l'exécution des ordres des clients.
         exécutés.",
-        'b4' => "De plus, Moneta Market ne peut pas garantir qu'une fois la commande donnée, les dépenses du client seront
+        'b4' => "De plus, Gestion du Patrimoine ne peut pas garantir qu'une fois la commande donnée, les dépenses du client seront
         sera
     bénéfique que la valeur originale qui pourrait peut-être être obtenue dans un autre cas. ",
         'exe' => "Aspects de l'exécution",
-        'b5' => 'Moneta Market est tenu de prendre en compte plusieurs aspects dans sa délibération ; les suivants sont détaillés
+        'b5' => 'Gestion du Patrimoine est tenu de prendre en compte plusieurs aspects dans sa délibération ; les suivants sont détaillés
         ci-dessous :',
-        'b6' => "De plus, Moneta Market ne peut pas garantir qu'une fois la commande donnée, les dépenses du client seront
+        'b6' => "De plus, Gestion du Patrimoine ne peut pas garantir qu'une fois la commande donnée, les dépenses du client seront
         sera
         bénéfique que la valeur originale qui pourrait peut-être être obtenue dans un autre cas.",
         'quotes' => ' Citations',
-        'b7' => "Moneta Market crée une valeur négociable propre à partir des chiffres obtenus sur les sources de prix libérées.
+        'b7' => "Gestion du Patrimoine crée une valeur négociable propre à partir des chiffres obtenus sur les sources de prix libérées.
         sources de prix, en comptant les banques qui offrent principalement la liqueur à travers le marché mondial.
-        Moneta Market garantit que les contrôles de l'écart entre l'offre et la demande sont complétés par la recommandation d'un vaste assortiment de sources de prix fondamentales, en comptant les banques qui offrent principalement la liquéfaction à travers le marché mondial.
+        Gestion du Patrimoine garantit que les contrôles de l'écart entre l'offre et la demande sont complétés par la recommandation d'un vaste assortiment de sources de prix fondamentales, en comptant les banques qui offrent principalement la liquéfaction à travers le marché mondial.
         recommandation à un assortiment étendu de sources de prix fondamentaux, en comptant les bases statistiques.
-        bases statistiques. Ainsi, Moneta Market peut garantir que le client reçoit la meilleure exécution possible. ",
+        bases statistiques. Ainsi, Gestion du Patrimoine peut garantir que le client reçoit la meilleure exécution possible. ",
         'charges' => ' Charges',
         'b8' => "Lorsqu'un client prend une position sur l'un des instruments financiers proposés, celle-ci contient certainement une commission ou un paiement financier.
         contenir une commission ou un paiement de financement.
@@ -467,61 +468,61 @@ return [
         'b9' => "Les commandes sont positionnées dans des portées de portion. Un composant qui traite la quantité de l'opération
         est appelée lot, qui varie en fonction de chaque instrument financier donné. Si un client souhaite
         Si un client souhaite passer un ordre de grande envergure, cela peut s'avérer moins favorable dans certaines circonstances, car la liquidité augmente sur le marché.
-        circonstances, car la liquidité augmente sur le marché. Moneta Market se réserve le droit de refuser
-        l'ordre d'un client, si la taille de l'ordre est considérée comme trop importante et ne peut être exécutée par Moneta Market. ",
+        circonstances, car la liquidité augmente sur le marché. Gestion du Patrimoine se réserve le droit de refuser
+        l'ordre d'un client, si la taille de l'ordre est considérée comme trop importante et ne peut être exécutée par Gestion du Patrimoine. ",
         'frequency' => 'Fréquence',
         'b10' => "Normalement, les valeurs des prix changent souvent dans les périodes à venir. La régularité avec laquelle ils le font
-        varie selon les instruments financiers et les conditions actuelles du marché. Comme Moneta Market
-        produit ses propres valeurs de prix négociables, la technologie utilisée par le client pour établir des relations avec Moneta Market jouera un rôle déterminant.
-        relations avec Moneta Market jouera un rôle déterminant. En outre, les prix négociables
-        sont distribués par le biais des programmes de négociation d'Moneta Market.",
+        varie selon les instruments financiers et les conditions actuelles du marché. Comme Gestion du Patrimoine
+        produit ses propres valeurs de prix négociables, la technologie utilisée par le client pour établir des relations avec Gestion du Patrimoine jouera un rôle déterminant.
+        relations avec Gestion du Patrimoine jouera un rôle déterminant. En outre, les prix négociables
+        sont distribués par le biais des programmes de négociation d'Gestion du Patrimoine.",
         'instruments' => 'Instruments',
-        'b11' => 'Moneta Market exécute les ordres relatifs à tout instrument de négociation de produits dérivés sur devises (" FX ").',
-        'b12' => 'Moneta Market propose les produits de change suivants
+        'b11' => 'Gestion du Patrimoine exécute les ordres relatifs à tout instrument de négociation de produits dérivés sur devises (" FX ").',
+        'b12' => 'Gestion du Patrimoine propose les produits de change suivants
         produits :',
         'l1' => 'Dérivés de change',
         'l2' => 'Dérivés de matières premières',
         'l3' => 'Indices Dérivés',
         'l4' => 'Métaux au comptant Dérivés ',
         'l5' => 'Les idéologies de la meilleure exécution ',
-        'l6' => "Lors de l'exécution d'une commande d'un client, Moneta Market est autorisé à mettre en place les éléments suivants
+        'l6' => "Lors de l'exécution d'une commande d'un client, Gestion du Patrimoine est autorisé à mettre en place les éléments suivants
         facteurs suivants en observation :",
         'l7' => "Les caractéristiques du client et le lieu où il est classé.",
         'l8' => 'Les caractéristiques de la commande du Client.',
         'l9' => "Les caractéristiques des lieux d'exécution auxquels cet ordre peut être engagé.",
         'l10' => "Les caractéristiques des instruments de négociation sur lesquels porte l'ordre.",
         'instructions' => 'Instructions pour les clients',
-        'b13' => "Dans le cas où le Client reçoit une directive précise de la part d'Moneta Market concernant l'exécution de la commande et que la société a décidé de cette directive, l'exécution de la commande ne sera pas possible.
+        'b13' => "Dans le cas où le Client reçoit une directive précise de la part d'Gestion du Patrimoine concernant l'exécution de la commande et que la société a décidé de cette directive, l'exécution de la commande ne sera pas possible.
         l'exécution de l'ordre et que la société a décidé de cette directive, par conséquent, une exécution de l'ordre sera exécutée selon l'instruction spécifique donnée.
         l'ordre sera exécuté avec l'instruction spécifique donnée.",
-        'b14' => "Néanmoins, si le client souhaite exécuter un ordre et donne une certaine instruction, alors en exécutant cet ordre, Moneta Market s'acquittera de la responsabilité d'Moneta Market de fournir la meilleure exécution.
-        l'ordre, Moneta Market s'acquittera de la responsabilité d'Moneta Market de fournir la meilleure exécution au client.
-        pour le client. Cela peut avoir pour conséquence de ne pas être qualifié pour se conformer à la politique d'exécution des ordres d'Moneta Market pour cet ordre.
-        d'exécution des ordres d'Moneta Market pour cet ordre précis.
+        'b14' => "Néanmoins, si le client souhaite exécuter un ordre et donne une certaine instruction, alors en exécutant cet ordre, Gestion du Patrimoine s'acquittera de la responsabilité d'Gestion du Patrimoine de fournir la meilleure exécution.
+        l'ordre, Gestion du Patrimoine s'acquittera de la responsabilité d'Gestion du Patrimoine de fournir la meilleure exécution au client.
+        pour le client. Cela peut avoir pour conséquence de ne pas être qualifié pour se conformer à la politique d'exécution des ordres d'Gestion du Patrimoine pour cet ordre.
+        d'exécution des ordres d'Gestion du Patrimoine pour cet ordre précis.
         ",
         'entities' => "Entités d'exécution",
         'b15' => "Les entités chargées de l'exécution sont principalement le cadre dans lequel les ordres sont placés ou exécutés.
         ou exécutés. Les Entités d'Exécution pour le compte des Clients seront donc accréditées par des sociétés d'investissement.
         par des sociétés d'investissement. ",
-        'b16' => "En général, les fonds placés sur les comptes des clients auprès d'Moneta Market, en comptant les ordres qui sont positionnés vers une plateforme de trading, sont sécurisés par Moneta Market.
-        positionnés vers une plateforme de trading sont sécurisés par Moneta Market qui est le seul responsable des
+        'b16' => "En général, les fonds placés sur les comptes des clients auprès d'Gestion du Patrimoine, en comptant les ordres qui sont positionnés vers une plateforme de trading, sont sécurisés par Gestion du Patrimoine.
+        positionnés vers une plateforme de trading sont sécurisés par Gestion du Patrimoine qui est le seul responsable des
         de ces capitaux. ",
         'review' => 'Examen et surveillance',
-        'b21' => "La politique mise en œuvre par Moneta Market sera certainement surveillée, y compris les dispositions substantielles relatives à l'exécution des ordres.
+        'b21' => "La politique mise en œuvre par Gestion du Patrimoine sera certainement surveillée, y compris les dispositions substantielles relatives à l'exécution des ordres.
         d'exécution des ordres, principalement sur une base constante afin de réguler et de suggérer des
         de meilleures améliorations.",
-        'b17' => "Il est également obligatoire pour l'entreprise d'évaluer systématiquement la Politique et les préparatifs d'exécution de la commande en question, afin de mesurer si Moneta Market est compétent en la matière.
-        d'exécution des ordres sur une base systématique dans tous les cas afin de mesurer si Moneta Market est suffisamment
+        'b17' => "Il est également obligatoire pour l'entreprise d'évaluer systématiquement la Politique et les préparatifs d'exécution de la commande en question, afin de mesurer si Gestion du Patrimoine est compétent en la matière.
+        d'exécution des ordres sur une base systématique dans tous les cas afin de mesurer si Gestion du Patrimoine est suffisamment
         suffisamment compétent pour fournir la meilleure exécution à ses clients. ",
         'permissions' => 'Permissions des clients',
-        'b18' => "Moneta Market est tenu d'obtenir l'accord préalable du client sur cette politique lorsqu'il établit une association commerciale avec le client.
-        d'affaires concernant le Client. De plus, Moneta Market est tenu d'obtenir l'accord préalable du
+        'b18' => "Gestion du Patrimoine est tenu d'obtenir l'accord préalable du client sur cette politique lorsqu'il établit une association commerciale avec le client.
+        d'affaires concernant le Client. De plus, Gestion du Patrimoine est tenu d'obtenir l'accord préalable du
         l'approbation préalable du client avant de mettre en œuvre les ordres des clients ou d'obtenir ou d'exécuter des ordres.
         l'exécution d'un ordre.",
-        'b19' => "Moneta Market est capable d'acquérir les accords susmentionnés dans le cadre d'un règlement général.",
-        'b20' => "Moneta Market s'adaptera aux Clients qui ont acquis la Police ou qui ont été sanctionnés pour la prendre par
+        'b19' => "Gestion du Patrimoine est capable d'acquérir les accords susmentionnés dans le cadre d'un règlement général.",
+        'b20' => "Gestion du Patrimoine s'adaptera aux Clients qui ont acquis la Police ou qui ont été sanctionnés pour la prendre par
         moyens électroniques ou toute autre transaction en ligne, y compris ceux qui se sont largement mis d'accord
-        sur les conditions générales de vente d'Moneta Market. ",
+        sur les conditions générales de vente d'Gestion du Patrimoine. ",
         'contact' => 'Contact',
         'cus' => 'Département du support client',
         'email' => 'Courriel :support@gestiondupatrimoine.net',
@@ -675,19 +676,19 @@ return [
         'client' => 'Agrément du client',
         'b1' => "Le client (le ' client ') affirme qu'en utilisant nos services, il ou elle
                 a lu attentivement le présent document, a compris et accepté tout ce qui y est écrit.
-                dans le présent document. Ce document, qui constitue un contrat légal entre le client et Moneta Market ('Moneta Market', 'Société', 'nous', 'notre'), détermine les responsabilités et les droits d'Moneta Market et de ses clients dans le cadre des services de la Société.",
+                dans le présent document. Ce document, qui constitue un contrat légal entre le client et Gestion du Patrimoine ('Gestion du Patrimoine', 'Société', 'nous', 'notre'), détermine les responsabilités et les droits d'Gestion du Patrimoine et de ses clients dans le cadre des services de la Société.",
         'risk' => 'Divulgation des risques généraux',
         'b3' => 'Les produits dérivés et/ou les opérations sur devises comportent un risque élevé de perte et ne conviennent pas à tout le monde. Ces
                 services sont proposés par la société ; en outre, des indices, des matières premières, des devises et des
                 métaux à négocier. En utilisant les services de la Société, le Client comprend les risques qui peuvent survenir et est conscient de tous les risques encourus.
                 risques qui peuvent survenir, et est conscient de toutes les responsabilités et de tous les coûts associés.
-                capable de gérer des transactions sur une base régulière. Moneta Market a fourni une déclaration de
+                capable de gérer des transactions sur une base régulière. Gestion du Patrimoine a fourni une déclaration de
                 déclaration de risque pour une information plus détaillée, qui doit être comprise et acceptée par le client.
                 pour. ',
         'details' => "DÉTAILS DE L'ENTREPRISE",
         'b4' => "Avertissement sur les risques : Le trading du Forex et des produits dérivés comporte un niveau élevé de risque pour votre capital,
                 et vous ne devez donc investir qu'avec des fonds gérables par vos propres moyens.",
-        'b5' => "Moneta Market powered by Moneta Market Ltd. (numéro d'enregistrement 936729). Une société avec
+        'b5' => "Gestion du Patrimoine powered by Gestion du Patrimoine Ltd. (numéro d'enregistrement 936729). Une société avec
                 une adresse opérationnelle au 7/F, Low Block, Grand Millennium Plaza, 181 Queen's Road
                 Central, Hong Kong.",
         'b6' => "Toutes les plaintes peuvent être adressées à l'adresse électronique et/ou au numéro de téléphone.
@@ -695,7 +696,7 @@ return [
     ],
     'headings' => [
         'head' => 'TITRES',
-        'b1' => '" Moneta Market " fait référence à la Société, aux sociétés affiliées, aux subordonnés et à leurs bénéficiaires ;',
+        'b1' => '" Gestion du Patrimoine " fait référence à la Société, aux sociétés affiliées, aux subordonnés et à leurs bénéficiaires ;',
         'b2' => "Le 'Client' fait référence au(x) client(s), partie(s) qui utilise(nt) les Services de la Société et qui a(ont) déclaré qu'il(s) respecte(nt) les Conditions Générales.
                 services de la Société et qui ont déclaré respecter scrupuleusement les Conditions Générales de la présente
                 conditions énoncées dans le présent document ;",
@@ -705,7 +706,7 @@ return [
     'application' => [
         'head' => 'APPLICABILITÉ DES TERMES ET CONDITIONS',
         'b1' => "Les Conditions Générales prennent effet, et lient le Client et la Société, de toutes les
-                obligations et droits fixés au moment où le Client a commencé à commercer en utilisant les services et technologies d'Moneta Market.
+                obligations et droits fixés au moment où le Client a commencé à commercer en utilisant les services et technologies d'Gestion du Patrimoine.
                 et de ses technologies. Si le Client ne peut pas formellement ignorer les Conditions Générales pour quelque raison que ce soit, cela ne devrait pas affecter les droits et obligations du Client.
                 conditions pour quelque raison que ce soit, cela ne devrait pas affecter les dispositions ; les activités de trading du
                 activités commerciales du Client dans la Société suffiront à affirmer le consentement et l'accord du Client aux
@@ -731,7 +732,7 @@ return [
         'eligibl' => 'Eligibilite',
         'b2' => "En utilisant les services de la Société, le Client accepte donc qu'il est éligible pour
                 accepter les accords énoncés dans le présent document, et qu'aucune loi ou juridiction n'est violée. Les services
-                services fournis par Moneta Market sont destinés uniquement aux clients auxquels les lois de toute juridiction applicable n'interdisent pas d'acquérir des accords liés au trading.
+                services fournis par Gestion du Patrimoine sont destinés uniquement aux clients auxquels les lois de toute juridiction applicable n'interdisent pas d'acquérir des accords liés au trading.
                 les lois de toute juridiction applicable d'acquérir des accords liés au trading. Le site
                 client déclare, garantit et accepte par les présentes de s'assurer que son utilisation des
                 services sera conforme à toutes les lois, statuts et réglementations applicables. La Société
@@ -742,7 +743,7 @@ return [
     ],
     'offerings' => [
         'head' => "OFFRES DE L'ENTREPRISE",
-        'b1' => "Moneta Market offre une variété de services de trading à ses clients, dont les suivants
+        'b1' => "Gestion du Patrimoine offre une variété de services de trading à ses clients, dont les suivants
                 dérivés, le Forex, les matières premières et bien plus encore, comme le montre le site Web de la société.
                 de la société. Vous reconnaissez que toute perte ou profit qui pourrait être occasionné par des
                 l'instabilité des conditions du marché se fera à vos propres risques..",
@@ -752,7 +753,7 @@ return [
     'communication' => [
         'head' => 'COMMUNICATION',
         'b1' => "You acknowledge that all communication from the Company shall be in electronic form
-                through Moneta Market's website and other Company means of communication to
+                through Gestion du Patrimoine's website and other Company means of communication to
                 clients.",
 
     ],
@@ -769,7 +770,7 @@ return [
                 solde du client sera déduit de ses fonds de crédit. La demande de retrait approuvée
                 La demande de retrait approuvée sera envoyée au Client de la même manière qu'elle a été reçue par la Société.
                 La Société ne sera pas tenue responsable des frais de transfert ou autres frais relatifs au retrait.
-                au retrait. Moneta Market se réserve le droit exclusif de rejeter toute autre procédure de retrait demandée par le client.
+                au retrait. Gestion du Patrimoine se réserve le droit exclusif de rejeter toute autre procédure de retrait demandée par le client.
                 procédure de retrait demandée par le Client et conseille la méthode la plus viable.",
         'b3' => 'Les fonds qui ont été transférés par carte seront envoyés par la Société avec le même
                 montant qui a été déposé par le client. Le transfert par compte bancaire aura lieu
@@ -802,7 +803,7 @@ return [
     ],
     'client_fund' => [
         'head' => 'FONDS CLIENT ',
-        'b1' => "Moneta Market est autorisé à conserver les fonds du client pour les utiliser à des fins de négociation. Les pertes
+        'b1' => "Gestion du Patrimoine est autorisé à conserver les fonds du client pour les utiliser à des fins de négociation. Les pertes
                 et les profits après négociation seront déduits ou déposés sur le compte de négociation du client.",
 
         'b2' => "La société se réserve le droit de clôturer les comptes détenant l'investissement minimum de 100,00 USD et d'appliquer les frais nécessaires sans préavis au client.
@@ -814,13 +815,13 @@ return [
     'fund_transfer' => [
         'head' => 'REPRÉSENTANT DU CLIENT ET TRANSFERT DE FONDS  ',
         'b1' => "Dans le cas où le Client autorise une tierce personne à gérer son compte de trading
-                compte de trading, le client affirme que cette action est réalisée à ses propres risques, car Moneta Market ne peut être tenu responsable de votre action et n'est pas obligé de faire des recommandations en la matière.
+                compte de trading, le client affirme que cette action est réalisée à ses propres risques, car Gestion du Patrimoine ne peut être tenu responsable de votre action et n'est pas obligé de faire des recommandations en la matière.
                 recommandations en la matière. La Société est libre de refuser la nomination d'un représentant et peut donc rejeter des transactions.
                 de refuser la nomination d'un représentant et peut donc rejeter les transactions effectuées au
                 nom du client. ",
 
         'b2' => 'Si une demande de transfert de fonds entre deux sociétés clientes est initiée, les deux parties doivent soumettre une demande formelle soumise à approbation.
-                doivent soumettre une demande formelle soumise à approbation. Moneta Market peut rejeter les demandes de
+                doivent soumettre une demande formelle soumise à approbation. Gestion du Patrimoine peut rejeter les demandes de
                 de transfert de fonds. ',
 
     ],
@@ -838,11 +839,11 @@ return [
                 les transactions en cours peuvent entraîner une sortie automatique ; les transactions seront fermées en conséquence.
                 Une exemption de la sortie automatique est possible, à condition que le compte soit en règle,
                 dans ce cas, le transfert vers un autre fournisseur de liquidités est facultatif. ",
-        'b7' => "Toutes les conversations entre le client et le personnel d'Moneta Market peuvent être enregistrées électroniquement avec ou sans préavis.
+        'b7' => "Toutes les conversations entre le client et le personnel d'Gestion du Patrimoine peuvent être enregistrées électroniquement avec ou sans préavis.
                 électroniquement avec ou sans préavis. Ces enregistrements peuvent être utilisés pour clarifier et résoudre des
                 litiges et/ou précédents juridiques qui pourraient survenir. Il est par ailleurs reconnu que ces
-                enregistrements sont la propriété exclusive de l'entreprise ; Moneta Market se réserve donc le
-                Moneta Market se réserve donc le droit de refuser de fournir les enregistrements demandés. ",
+                enregistrements sont la propriété exclusive de l'entreprise ; Gestion du Patrimoine se réserve donc le
+                Gestion du Patrimoine se réserve donc le droit de refuser de fournir les enregistrements demandés. ",
 
     ],
     'bonus' => [
@@ -853,7 +854,7 @@ return [
                 donner des bonus qui sont soumis à des termes et conditions séparés et spécifiques tels que définis par la Société.
                 l'entreprise. ",
         'b3' => 'Les bonus et/ou les bénéfices obtenus grâce aux bonus ne pourront être retirés par le Client que si
-                le volume de trading requis, déterminé par Moneta Market, est atteint (volume de trading minimum
+                le volume de trading requis, déterminé par Gestion du Patrimoine, est atteint (volume de trading minimum
                 volume de trading minimum de 10 000 $ pour chaque dollar de bonus 1 $).
                 La Société se réserve le droit de modifier les termes et conditions des bonus à tout moment
                 sans notification préalable.',
@@ -864,18 +865,18 @@ return [
                 directives relatives aux bonus ne sont pas respectées. ",
         'b5' => "En cas de suspicion d'activité frauduleuse en rapport avec le bonus et/ou les promotions,
                 la Société peut, à sa seule discrétion, annuler le bonus, la promotion, ainsi que bloquer
-                le compte de trading du Client. Moneta Market se réserve également le droit de bloquer le compte de trading du client et de restituer le solde.
+                le compte de trading du Client. Gestion du Patrimoine se réserve également le droit de bloquer le compte de trading du client et de restituer le solde.
                 compte de trading du Client et de restituer le solde au Client.",
 
     ],
     'seclusion' => [
         'head' => 'LE BLOCAGE DES FONDS DES CLIENTS ET LES CONVERSIONS DE DEVISES   ',
-        'b1' => "Moneta Market conduit les fonds qu'il détient au nom du client comme des fonds de clients. Le site
+        'b1' => "Gestion du Patrimoine conduit les fonds qu'il détient au nom du client comme des fonds de clients. Le site
                 Société conserve et maintient des livres et des enregistrements comptables des fonds des clients adhérés
                 en faveur de ses clients en substance aux termes et conditions des banques et des
                 établissements de crédit où ces fonds sont garantis et transférés. ",
 
-        'b2' => "Moneta Market se coordonne avec différents établissements de crédit ; une liste complète de ces
+        'b2' => "Gestion du Patrimoine se coordonne avec différents établissements de crédit ; une liste complète de ces
                 établissements de crédit peut être consultée sur le site Internet officiel de la Société ou, le cas échéant
                 dans la plateforme de négociation électronique concernée.  ",
         'b3' => "En prenant en considération les attributs spéculatifs du trading en ligne, en acceptant ces conditions générales de vente, le client s'engage à ne pas demander le remboursement du service.
@@ -892,13 +893,13 @@ return [
     ],
     'fees' => [
         'head' => 'HONORAIRES, COMMISSIONS ET AUTRES COÛTS  ',
-        'b1' => "Les clients peuvent être tenus de payer les coûts et les frais décrits dans les frais de service d'Moneta Market, y compris les commissions convenues.
-                d'Moneta Market, y compris les commissions convenues, tandis que tous les montants dus seront déduits du
+        'b1' => "Les clients peuvent être tenus de payer les coûts et les frais décrits dans les frais de service d'Gestion du Patrimoine, y compris les commissions convenues.
+                d'Gestion du Patrimoine, y compris les commissions convenues, tandis que tous les montants dus seront déduits du
                 solde de trading du client. Sans notification préalable, la Société se réserve le droit de modifier
                 sans préavis, la Société se réserve le droit de modifier les spreads sur n'importe lequel des instruments en raison de la nature volatile du marché.  ",
 
         'b2' => "Les paiements prévus aux présentes comprennent les parts de revenus, les commissions, les rabais et les écarts pour les tiers
-                qui ont institué le lien professionnel entre les effectifs d'Moneta Market et
+                qui ont institué le lien professionnel entre les effectifs d'Gestion du Patrimoine et
                 les clients.    ",
         'b3' => "Les clients sont jusqu'à présent les seuls responsables du règlement des impôts, tandis que la Société n'est pas tenue de produire des recommandations concernant les obligations fiscales, les rapports et les déclarations.
                 La Société n'est pas tenue de produire des recommandations concernant les obligations fiscales, les rapports et les déclarations.Le défaut de règlement du montant à la Société dans les délais est soumis à un taux d'intérêt de 4 % par an et à des intérêts journaliers supplémentaires (déterminés par la Société).
@@ -916,14 +917,14 @@ return [
         'b1' => "Les fonds sont nécessaires pour ouvrir des ordres et/ou effectuer des transactions. En outre, la
                 Société exige du client qu'il maintienne un montant spécifique de fonds sur le compte de
                 compte de trading pour des raisons de sécurité. Les instruments ont des spécifications de marge différentes et peuvent être
-                être modifiées à tout moment. Moneta Market peut imposer des exigences maximales pour se conformer à des
+                être modifiées à tout moment. Gestion du Patrimoine peut imposer des exigences maximales pour se conformer à des
                 diverses juridictions. Dans le cas où le Client ne parviendrait pas à conserver la marge minimale requise, la
                 Société se réserve le droit de fermer toutes les positions en cours et de liquider votre compte
                 sans notification préalable.  ",
 
         'b2' => "Les fonds du client pour la marge doivent être fournis par le client uniquement sous la forme d'argent réel
                 sauf accord contraire de la Société. Il est de la responsabilité du client de surveiller son compte et son niveau de marge.
-                compte et son niveau de marge, tandis qu'Moneta Market peut choisir de limiter les transactions et les
+                compte et son niveau de marge, tandis qu'Gestion du Patrimoine peut choisir de limiter les transactions et les
                 transactions, et d'augmenter le montant sur le compte de trading suite à un appel de marge.    ",
 
 
@@ -931,7 +932,7 @@ return [
     'abritage' => [
         'head' => "LA POLITIQUE CONTRE L'ARBITRAGE, LA MANIPULATION ET L'UTILISATION D'UN CONSEILLER EXPERT
                 ",
-        'b1' => "Moneta Market interdit strictement toute forme d'arbitrage et de manipulation de sa plateforme,
+        'b1' => "Gestion du Patrimoine interdit strictement toute forme d'arbitrage et de manipulation de sa plateforme,
                 ainsi, tirer profit de la latence et de l'alimentation des prix, des délais de connectivité et des
                 erreurs de transaction ne sont pas tolérées. Les activités de scalping et l'utilisation de conseillers experts ne sont pas autorisées.
                 L'activité de scalping et l'utilisation de conseillers experts ne sont pas autorisées.
@@ -947,7 +948,7 @@ return [
         'b2' => "La Société peut fixer des heures limites pour l'acceptation des instructions du client pour les ordres et dans
                 Si le client n'a pas passé d'ordre, d'instruction d'ordre ou d'instruction complète dans le cadre du placement, la Société n'est pas tenue responsable de ce manquement.
                 complète dans le cadre du placement, la Société ne peut être tenue responsable de cette situation.
-                question. Moneta Market peut exécuter les ordres du client, mais n'est pas obligé de le faire,
+                question. Gestion du Patrimoine peut exécuter les ordres du client, mais n'est pas obligé de le faire,
                 en dehors des heures normales de négociation.",
         'b3' => "Les ordres peuvent être placés, mis à jour ou supprimés pendant l'heure de négociation fixée.
                 exécutés, ils restent valables pour le jour suivant. La Société peut, à sa seule discrétion
@@ -964,7 +965,7 @@ return [
     ],
     'investment_advice' => [
         'head' => "RESTRICTION DU CONSEIL EN MATIÈRE D'INVESTISSEMENT ",
-        'b1' => "Sur la base de ce que la Société considère comme fiable, Moneta Market et toutes ses forces de travail
+        'b1' => "Sur la base de ce que la Société considère comme fiable, Gestion du Patrimoine et toutes ses forces de travail
                 peuvent fournir des conseils d'investissement et des signaux de marché au Client. Ces informations
                 peuvent être données par un courtier seul et peuvent ne pas être exactes et/ou vérifiées.
                 L'évaluation des recommandations est à la seule discrétion du client.  ",
@@ -982,27 +983,27 @@ return [
         'b2' => 'Par la suite, le Client devra contacter le représentant de la Société par les moyens de communication disponibles ou par les contacts indiqués sur le site officiel de la Société.
                 moyens de communication disponibles ou en utilisant les contacts indiqués sur le site officiel de la
                 Société.',
-        'b3' => "Si le Client ne se conforme pas à ces actions, il renonce à tout droit qu'il aurait pu avoir à l'égard d'Moneta Market concernant cette divergence, étant donné l'impossibilité d'y remédier.
-                droits qu'il aurait pu avoir à l'égard d'Moneta Market concernant cette divergence depuis l'impossibilité
+        'b3' => "Si le Client ne se conforme pas à ces actions, il renonce à tout droit qu'il aurait pu avoir à l'égard d'Gestion du Patrimoine concernant cette divergence, étant donné l'impossibilité d'y remédier.
+                droits qu'il aurait pu avoir à l'égard d'Gestion du Patrimoine concernant cette divergence depuis l'impossibilité
                 d'aller de l'avant. Cela signifie que pour toutes les configurations du portefeuille du Client, ce dernier
                 porte l'entière responsabilité du moment où il n'a pas effectué les actions correspondantes
-                quel que soit l'impact ultérieur du profit ou de la perte sur le montant total du profit et de la perte. Le non-respect de ces actions est considéré comme une incapacité à atténuer les pertes. Le client doit soumettre toute réclamation à Moneta Market par écrit à l'adresse e-mail :
+                quel que soit l'impact ultérieur du profit ou de la perte sur le montant total du profit et de la perte. Le non-respect de ces actions est considéré comme une incapacité à atténuer les pertes. Le client doit soumettre toute réclamation à Gestion du Patrimoine par écrit à l'adresse e-mail :
                 support@gestiondupatrimoine.net.",
-        'b4' => 'Dans un délai de trente (30) jours ouvrables, Moneta Market doit vérifier toute plainte écrite, si elle est suffisamment documentée, et présenter sa position à la Commission.
+        'b4' => 'Dans un délai de trente (30) jours ouvrables, Gestion du Patrimoine doit vérifier toute plainte écrite, si elle est suffisamment documentée, et présenter sa position à la Commission.
                 écrite si elle est suffisamment documentée, et présenter sa position au client.
                 client. ',
         'b5' => 'Le client, à son tour, ne fera aucune déclaration publique sous quelque forme que ce soit concernant sa
                 plainte dans les trente (30) jours ouvrables. Si le client enfreint cette clause, le client
-                clause, le client accepte de payer à Moneta Market un dédommagement pour atteinte à la réputation de 100,00
+                clause, le client accepte de payer à Gestion du Patrimoine un dédommagement pour atteinte à la réputation de 100,00
                 cette violation, le maximum cumulé de ce paiement pouvant atteindre 10 000,00 $.',
-        'b6' => "Le client et Moneta Market s'engagent à faire tout leur possible pour résoudre tout litige, de bonne foi et sur une base constructive.
+        'b6' => "Le client et Gestion du Patrimoine s'engagent à faire tout leur possible pour résoudre tout litige, de bonne foi et sur une base constructive.
                 bonne foi et sur une base constructive. Le Client reconnaît et accepte que les menaces et/ou le
-                chantage à l'encontre d'Moneta Market sont interdits et constituent le ou les motifs légitimes de la
+                chantage à l'encontre d'Gestion du Patrimoine sont interdits et constituent le ou les motifs légitimes de la
                 l'arrêt des négociations et la cessation immédiate de toute relation d'affaires.",
-        'b7' => "Sans préjudice de tout autre droit d'Moneta Market en vertu des présentes Conditions, si les parties sont en
-                parties sont en conflit au sujet d'un mandat commercial, Moneta Market a le droit, à sa seule
+        'b7' => "Sans préjudice de tout autre droit d'Gestion du Patrimoine en vertu des présentes Conditions, si les parties sont en
+                parties sont en conflit au sujet d'un mandat commercial, Gestion du Patrimoine a le droit, à sa seule
                 sans notification préalable, d'accepter tout avis et toute action qu'il considère comme raisonnable pour limiter
-                le montant maximal concerné par le litige. Moneta Market n'est pas responsable envers le Client,
+                le montant maximal concerné par le litige. Gestion du Patrimoine n'est pas responsable envers le Client,
                 ou n'a aucune obligation envers le Client, en ce qui concerne les fluctuations et les risques sur la
                 trading ",
         'b8' => 'Le litige entre le Client et la Société est régi par la juridiction des
@@ -1011,10 +1012,10 @@ return [
     ],
     'indemnification' => [
         'head' => 'INDEMNISATION ',
-        'b1' => "Vous reconnaissez qu'Moneta Market et ses collaborateurs ne pourront être tenus responsables de toute
+        'b1' => "Vous reconnaissez qu'Gestion du Patrimoine et ses collaborateurs ne pourront être tenus responsables de toute
                 pertes, coûts, dépenses et dommages qui pourraient survenir dans le cas où le client n'accomplirait pas
-                d'accomplir ses obligations dans le cadre du présent accord. Moneta Market est libre de toute responsabilité dans toutes
-                réclamations qui pourraient avoir été provoquées par une erreur de système et/ou d'équipement d'Moneta Market
+                d'accomplir ses obligations dans le cadre du présent accord. Gestion du Patrimoine est libre de toute responsabilité dans toutes
+                réclamations qui pourraient avoir été provoquées par une erreur de système et/ou d'équipement d'Gestion du Patrimoine
                 ou du client, des retards, des erreurs ou des défaillances dans l'exécution de toute instruction au nom du client,
                 des actions du représentant du client, et des recommandations de marché qui ont été faites
                 sur la base des données du marché.  ",
@@ -1022,8 +1023,8 @@ return [
     ],
     'confidential' => [
         'head' => "DROIT D'AUTEUR ET CONFIDENTIALITÉ ",
-        'b1' => "Les informations contenues dans le site officiel, les marques de commerce, les droits d'auteur et les droits de propriété intellectuelle sont la propriété exclusive d'Moneta Market et de ses concédants.
-                droits de propriété intellectuelle sont la propriété exclusive d'Moneta Market et de ses concédants de licence. Tous ces éléments et
+        'b1' => "Les informations contenues dans le site officiel, les marques de commerce, les droits d'auteur et les droits de propriété intellectuelle sont la propriété exclusive d'Gestion du Patrimoine et de ses concédants.
+                droits de propriété intellectuelle sont la propriété exclusive d'Gestion du Patrimoine et de ses concédants de licence. Tous ces éléments et
                 documents de tiers ne doivent pas être modifiés, publiés ou distribués par les clients
                 et/ou par toute autre tierce partie.
                 avis.  ",
@@ -1038,8 +1039,8 @@ return [
     'termination' => [
         'head' => 'RÉSILIATION ET MODIFICATION ',
         'b1' => "Le présent contrat peut être résilié par le client à tout moment, sous réserve d'un préavis d'au moins cinq jours ouvrables.
-                préavis d'au moins cinq jours ouvrables ; à condition que le client n'ait pas de positions ouvertes ; et qu'aucun montant ne soit dû à Moneta Market.
-                positions ouvertes ; et qu'aucun montant ne soit dû par le client à Moneta Market. Le client peut
+                préavis d'au moins cinq jours ouvrables ; à condition que le client n'ait pas de positions ouvertes ; et qu'aucun montant ne soit dû à Gestion du Patrimoine.
+                positions ouvertes ; et qu'aucun montant ne soit dû par le client à Gestion du Patrimoine. Le client peut
                 notifier la Société de la résiliation par email. La résiliation prendra
                 La résiliation prendra effet immédiatement après réception et confirmation de la Société.
                 avis.  ",
@@ -1047,10 +1048,10 @@ return [
         'b2' => "La résiliation du présent accord ne libère pas les deux parties des obligations prévues par le présent accord.
                 dans le présent accord. Elle n'affecte pas non plus les transactions livrées et convenues dans le présent contrat et ne décharge pas le client de toute responsabilité qui pourrait survenir après la résiliation.
                 et ne libère pas le client de toute responsabilité qui pourrait survenir après la résiliation.
-                résiliation. Dans le cas où le client n'est pas disposé à remplir ses obligations antérieures à l'égard de la Société, Moneta Market se réserve le droit d'annuler l'accord.
-                obligations envers la Société, Moneta Market se réserve le droit de rappeler tous les bénéfices
-                générés par les services de la Société. Moneta Market a le droit unique et exclusif
-                Moneta Market a le droit unique et exclusif d'apporter tout changement, mise à jour, altération aux Termes et
+                résiliation. Dans le cas où le client n'est pas disposé à remplir ses obligations antérieures à l'égard de la Société, Gestion du Patrimoine se réserve le droit d'annuler l'accord.
+                obligations envers la Société, Gestion du Patrimoine se réserve le droit de rappeler tous les bénéfices
+                générés par les services de la Société. Gestion du Patrimoine a le droit unique et exclusif
+                Gestion du Patrimoine a le droit unique et exclusif d'apporter tout changement, mise à jour, altération aux Termes et
                 notification préalable. ",
 
     ],
@@ -1272,13 +1273,13 @@ return [
     'trade_cdfs' => "Négociez des CFD sur un large éventail d'instruments, notamment les paires de devises les plus populaires, les contrats à terme, les indices, les métaux, les énergies et les actions, et découvrez les marchés mondiaux du bout des doigts",
     'open_acount' => 'Ouvrir un compte',
     'compliment_trading' => 'Complétez votre négociation avec nos outils exclusifs',
-    'gestiondupatrimoine_clients' => "Les clients d'Moneta Market bénéficient d'un accès exclusif aux outils de trading, aux nouvelles et aux analyses.",
+    'gestiondupatrimoine_clients' => "Les clients d'Gestion du Patrimoine bénéficient d'un accès exclusif aux outils de trading, aux nouvelles et aux analyses.",
     'calender' => 'Calendrier',
     'econs_earning' => 'Calendriers économiques et des gains',
     'analysis' => 'Analyse',
     'trading_central' => 'Trading Central Analyse technique',
     'reviews' => 'Critiques',
-    'daily_market_reviews' => "Des analyses quotidiennes du marché par l'équipe d'analystes d'Moneta Market",
+    'daily_market_reviews' => "Des analyses quotidiennes du marché par l'équipe d'analystes d'Gestion du Patrimoine",
     'knowledge' => 'Connaissances',
     'education' => 'Ressources éducatives',
     'trading_flexibility' => 'Flexibilité des transactions',
@@ -1289,7 +1290,7 @@ return [
     'buy' => 'Acheter',
     'change' => 'Changement',
     'platform' => 'Consultez votre plateforme pour connaître les prix les plus récents.',
-    'why_trade' => 'Pourquoi faire du commerce avec Moneta Market?',
+    'why_trade' => 'Pourquoi faire du commerce avec Gestion du Patrimoine?',
     'improve_result' => 'Améliorez vos résultats de négociation grâce à notre technologie de pointe',
     'best_cdf' => 'Meilleur courtier CFD.',
     'summit' => 'Sommet de TradeON 2020',
@@ -1304,8 +1305,8 @@ return [
     'creat_account' => 'Créer un compte',
     'discover' => 'Découvrez la plate-forme',
     'choose_platform' => 'Choisissez votre plateforme',
-    'platforms' => 'Nous mettons à la disposition de nos clients un large éventail de plateformes de trading de bureau, web et mobiles, notamment la plateforme Moneta Market, Tradre 7 et WebTrader.',
-    'gestiondupatrimoine_platform' => 'Plateforme Moneta Market',
+    'platforms' => 'Nous mettons à la disposition de nos clients un large éventail de plateformes de trading de bureau, web et mobiles, notamment la plateforme Gestion du Patrimoine, Tradre 7 et WebTrader.',
+    'gestiondupatrimoine_platform' => 'Plateforme Gestion du Patrimoine',
     'start_trading' => 'Commencer à négocier',
     'six_years' => '6 ans',
     'fifthteen' => '15 ans',
@@ -1313,7 +1314,7 @@ return [
     'cus_support' => 'Soutien aux clients',
     'five_years' => "Plus de 5 ans d'excellence",
     'global_broker' => 'Un courtier véritablement mondial',
-    'growth' => "Moneta Market a connu une croissance exponentielle au fil des ans et est devenu réputé pour fournir des conditions de trading d'élite à ses clients.
+    'growth' => "Gestion du Patrimoine a connu une croissance exponentielle au fil des ans et est devenu réputé pour fournir des conditions de trading d'élite à ses clients.
     fournir des conditions de trading d'élite à ses clients",
     'seamless' => 'Une expérience de négociation sans faille',
     'int_awards' => 'Plus de 90 prix britanniques et internationaux',
@@ -1323,7 +1324,7 @@ return [
     'commitment' => 'Nous maintenons un engagement inébranlable en faveur de pratiques commerciales équitables et éthiques.',
     'best_in_class' => 'Le meilleur courtier Tradre 7 de sa catégorie',
     'precautions' => 'Précautions à prendre',
-    'your_data' => 'Comment Moneta Market protège vos données',
+    'your_data' => 'Comment Gestion du Patrimoine protège vos données',
     'suspicious' => 'Signaler les messages suspects dans la boîte de réception',
     'fraud' => 'Signalement immédiat des fraudes',
     'download_now' => 'Download Now',
@@ -1342,7 +1343,7 @@ return [
     'ecn_cal' => 'Calendrier économique',
     'calc' => 'Calculatrice',
     'company' => 'Entreprise',
-    'abt' => "À propos d'Moneta Market",
+    'abt' => "À propos d'Gestion du Patrimoine",
     'cdt' => 'Score de Crédit',
     'sec' => 'Sécurité',
     'ctc' => 'Contactez Nous',
@@ -1351,7 +1352,7 @@ return [
     'excellence' => "5 ans d'excellence",
     'gbl_awd' => 'Plus de 15 prix internationaux',
     'cus_sup' => 'Assistance clientèle 24/6',
-    'copyright' => 'Copyright © 2022 Moneta Market. Tous droits réservés',
+    'copyright' => 'Copyright © 2022 Gestion du Patrimoine. Tous droits réservés',
     'copyright_2' => 'La négociation de produits dérivés et de produits à effet de levier comporte un niveau de risque élevé, notamment le risque de perdre beaucoup plus que votre investissement initial. Elle ne convient pas à tout le monde. Avant de prendre une décision concernant un produit financier, vous devez obtenir et examiner notre déclaration de produit (PDS) et notre guide des services financiers (FSG), disponibles sur notre site Internet, et demander un avis indépendant si nécessaire.',
     'industry_regulations' => "Réglementation",
     'clients' => "Clients",
@@ -1376,6 +1377,14 @@ return [
     'discover_accounts' => 'Découvrez les comptes',
     'more_freedom' => 'Obtenir plus de libertés sur les marchés financiers',
     'launch_webtrader' => 'Lancer le WebTrader',
+    'welcome_back' => 'Bienvenue!',
+    'forex_chart' => 'Données fondamentales du marché du Forex',
+    'trader' => 'TRADER',
+    'trader_sub' => 'Téléchargez notre Trader',
+    'web_mobile_apps' => 'Applications Web et mobiles',
+    'desktop_apps' => 'Applications de bureau',
+    'send_message' => 'Envoyez-nous un message',
+    'our_supported_platforms' => 'Nos plateformes supportées',
 
     'login' => [
         'lgn' => 'Connectez-vous à votre compte',

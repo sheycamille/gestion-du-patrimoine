@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    @include('includes.analytics')
+
     @yield('loadPaypal')
 
     <meta charset="UTF-8">
@@ -11,7 +13,7 @@
     <title>@yield('title') | {{ \App\Models\Setting::getValue('site_name') }}</title>
 
     <meta name="description"
-        content="{{ \App\Models\Setting::getValue('site_description') }} Moneta Market offers CFDs on currency pairs and five other asset classes. Start trading forex online with the world's best forex broker.">
+        content="{{ \App\Models\Setting::getValue('site_description') }} Gestion du Patrimoine offers CFDs on currency pairs and five other asset classes. Start trading forex online with the world's best forex broker.">
     <meta name="keywords"
         content="forex, exchange, broker, crypto, trading, indices, shares, stocks, bonds, cryptocurrencies, futures, energies">
     <meta name="author" content="gestiondupatrimoine.net">
@@ -23,77 +25,56 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Custom CSS -->
-    <link href="{{ asset('admin/libs/chartist/dist/chartist.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/extra-libs/c3/c3.min.css') }}" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="{{ asset('admin/css/style.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('admin/css/custom.css') }}" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Libraries CSS Files -->
+    <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     @yield('css')
 </head>
 
-<body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-    <div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
-    </div>
 
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    <div id="main-wrapper" data-theme="light" data-layout="vertical" data-navbarbg="skin1" data-sidebartype="full"
-        data-sidebar-position="absolute" data-header-position="relative" data-boxed-layout="full">
-        <div class="app-container" data-navbarbg="skin1"></div>
+<body id="page-top">
 
-        @yield('topbar')
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
         @yield('sidebar')
 
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        <div class="page-wrapper">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            @yield('topbar')
             @yield('content')
 
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center text-muted"> © 2023 <a href="https://www.gestiondupatrimoine.net/">Moneta
-                    Markets</a>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Gestion du Patrimoine</span>
+                    </div>
+                </div>
             </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+            <!-- End of Footer -->
+
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
+        <!-- End of Content Wrapper -->
 
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
+    <!-- End of Page Wrapper -->
 
-    <!-- Moneta Market and necessary plugins-->
-    <script src="{{ asset('admin/libs/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('admin/libs/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ asset('admin/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('admin/js/feather.min.js') }}"></script>
-    <script src="{{ asset('admin/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
-    <script src="{{ asset('admin/js/custom.js') }}"></script>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="{{ asset('admin/vendor/jquery/jquery.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('admin/vendor/jquery-easing/jquery.easing.min.js') }}" defer></script>
+    <script type="text/javascript" src="{{ asset('admin/js/sb-admin-2.min.js') }}" defer></script>
     @yield('javascript')
 
 </body>

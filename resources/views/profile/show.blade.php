@@ -2,7 +2,8 @@
 
 @section('title', 'My Profile')
 
-@section('profile-li', 'selected')
+@section('profile-li', 'active')
+@section('profile-open', 'show')
 @section('security', 'active')
 
 @section('content')
@@ -45,23 +46,6 @@
                                     </div>
                                 </div>
                             @endif
-                            {{-- <div class="row">
-                            <div class="col-md-8  col-offset-md-2 p-3">
-                                @if (Laravel\Fortify\Features::canUpdateProfileInformation())
-                                @livewire('profile.update-profile-information-form')
-                                <x-jet-section-border />
-                                @endif
-                            </div>
-                        </div> --}}
-                            <div class="row">
-                                <div class="col-md-8  col-offset-md-2 p-3">
-                                    @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
-                                        <div>
-                                            @livewire('profile.two-factor-authentication-form')
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-md-8  col-offset-md-2 p-3">
                                     <div class="mt-5">

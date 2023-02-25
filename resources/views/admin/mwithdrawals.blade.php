@@ -2,8 +2,9 @@
 
 @section('title', 'Manage Withdrawals')
 
-@section('manage-dw', 'c-show')
-@section('withdrawals', 'active')
+@section('mdw-li', 'active')
+@section('mdw-open', 'show')
+@section('mwithdrawals', 'active')
 
 @section('content')
 
@@ -229,16 +230,18 @@
     @include('admin.includes.modals')
 @endsection
 @section('javascript')
-    <script src="{{ asset('admin/js/jquery.validate.js') }}"></script>
-    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.validate.js') }}" defer></script>
+    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}" defer></script>
+    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}" defer></script>
     <script type="text/javascript">
-        $(function() {
-            var table = $('.yajra-datatable').DataTable({
-                order: [
-                    [8, 'desc']
-                ],
-                'pageLength': 100,
+        document.addEventListener("DOMContentLoaded", function() {
+            $(function() {
+                var table = $('.yajra-datatable').DataTable({
+                    order: [
+                        [8, 'desc']
+                    ],
+                    'pageLength': 100,
+                });
             });
         });
     </script>

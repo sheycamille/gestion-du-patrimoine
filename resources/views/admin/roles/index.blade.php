@@ -2,7 +2,8 @@
 
 @section('title', 'Manage admins')
 
-@section('manage-admins', 'c-show')
+@section('madmins-li', 'active')
+@section('madmins-open', 'show')
 @section('roles', 'active')
 
 @section('content')
@@ -137,15 +138,17 @@
 
 @endsection
 @section('javascript')
-    <script src="{{ asset('admin/js/jquery.validate.js') }}"></script>
-    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.validate.js') }}" defer></script>
+    <script src="{{ asset('admin/js/jquery.dataTables.min.js') }}" defer></script>
+    <script src="{{ asset('admin/js/dataTables.bootstrap4.min.js') }}" defer></script>
     <script type="text/javascript">
-        $(function() {
-            var table = $('.yajra-datatable').DataTable({
-                order: [
-                    [2, 'asc']
-                ],
+        document.addEventListener("DOMContentLoaded", function() {
+            $(function() {
+                var table = $('.yajra-datatable').DataTable({
+                    order: [
+                        [2, 'asc']
+                    ],
+                });
             });
         });
     </script>

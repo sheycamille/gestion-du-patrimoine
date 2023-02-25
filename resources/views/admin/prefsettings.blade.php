@@ -2,8 +2,9 @@
 
 @section('title', 'Site Preferences')
 
-@section('settings', 'c-show')
-@section('prefsettings', 'active')
+@section('msettings-li', 'active')
+@section('msettings-open', 'show')
+@section('sitepref', 'active')
 
 @section('content')
 

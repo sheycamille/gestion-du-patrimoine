@@ -2,7 +2,8 @@
 
 @section('title', 'Request a Withdrawal')
 
-@section('dw-li', 'selected')
+@section('dw-li', 'active')
+@section('dw-open', 'show')
 @section('withdrawals', 'active')
 
 @section('content')
@@ -52,9 +53,9 @@
                                     <div class="col-lg-4 p-3 rounded card">
                                         <div class="shadow card-body border-danger">
                                             <img height="100px" width="100px"
-                                                    style="margin-left: auto; margin-right:auto; padding-top:5px;"
-                                                    src="{{ asset('storage/photos/logos/' . $method->logo) }}"
-                                                    alt="{{ $method->logo }}">
+                                                style="margin-left: auto; margin-right:auto; padding-top:5px;"
+                                                src="{{ asset('storage/photos/logos/' . $method->logo) }}"
+                                                alt="{{ $method->logo }}">
                                             <h2 class="card-title mb-3">{{ $method->name }}</h2>
                                             <h4 class="">Minimum amount: <strong style="float:right;">
                                                     {{ \App\Models\Setting::getValue('currency') }}{{ $method->minimum }}</strong>

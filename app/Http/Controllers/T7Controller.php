@@ -151,7 +151,7 @@ class T7Controller extends Controller
         $t7Acc = Trader7::where('id', $id)->first();
 
         // update the Trader7 demo server
-        $resp = $this->performTransaction($t7Acc->currency, $t7Acc->number, '10000.0', 'MM-DEMO', 'MM-AUTO', 'deposit', 'balance');
+        $resp = $this->performTransaction($t7Acc->currency, $t7Acc->number, '10000.0', 'GDP-DEMO', 'GDP-AUTO', 'deposit', 'balance');
 
         $msg = 'Your Trader7 Demo Account has been successfully topped up with $10k!';
         if(gettype($resp) !== 'integer') {
@@ -179,7 +179,7 @@ class T7Controller extends Controller
             "   \r  Account Number: $t7Acc->number \r \n " .
         $objDemo->sender = "$site_name";
         $objDemo->date = Carbon::Now();
-        $objDemo->subject = "Your new Trader7 Account with Moneta Market!";
+        $objDemo->subject = "Your new Trader7 Account with Gestion du Patrimoine!";
 
         Mail::mailer('smtp')->bcc($user->email)->send(new NewNotification($objDemo));
     }

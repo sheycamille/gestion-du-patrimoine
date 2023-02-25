@@ -169,17 +169,15 @@
                         </div>
                         <div>
                             <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded uk-text-center">
-                                <img class="uk-margin-small-bottom"
-                                    src="{{ asset('front/img/in-liquid-icon-17.svg') }}"
+                                <img class="uk-margin-small-bottom" src="{{ asset('front/img/in-liquid-icon-17.svg') }}"
                                     data-src="{{ asset('front/img/in-liquid-icon-17.svg') }}" alt="wave-award"
                                     width="72" height="72" data-uk-img="">
-                                <h3 class="uk-margin-top">Moneta Market Trader 7</h3>
+                                <h3 class="uk-margin-top">Gestion du Patrimoine Trader 7</h3>
                             </div>
                         </div>
                         <div>
                             <div class="uk-card uk-card-secondary uk-card-body uk-border-rounded uk-text-center">
-                                <img class="uk-margin-small-bottom"
-                                    src="{{ asset('front/img/in-liquid-icon-18.svg') }}"
+                                <img class="uk-margin-small-bottom" src="{{ asset('front/img/in-liquid-icon-18.svg') }}"
                                     data-src="{{ asset('front/img/in-liquid-icon-18.svg') }}" alt="wave-award"
                                     width="72" height="72" data-uk-img="">
                                 <h3 class="uk-margin-top">@lang('message.start_trading')</h3>

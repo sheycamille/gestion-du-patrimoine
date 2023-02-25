@@ -48,12 +48,13 @@
                             trading with CFDs, you’re effectively buying or selling one against another in an attempt to
                             benefit from long or short term price changes.
 
-                            Moneta Market offers you easy access to trade on the price direction of more than 50 major,
+                            Gestion du Patrimoine offers you easy access to trade on the price direction of more than 50
+                            major,
                             minor
                             and exotic pairs from as low as 0.0 spreads.
 
                             Open an account to BUY or SELL forex CFDs such as the EUR/USD from 0.01 lots in less than 0.01s
-                            with Moneta Market's award-winning platforms. Take advantage of our flexible leverage*,
+                            with Gestion du Patrimoine's award-winning platforms. Take advantage of our flexible leverage*,
                             leading
                             research and advanced analysis tools.
                         </p>
@@ -61,8 +62,7 @@
                             <a class="btn-get-started" href="{{ route('register') }}">Start Trading Forex</a><br>
                         </div>
                     </div>
-                    <img class="col-md-4" src="{{ asset('front/img/about/Forex_1.png') }}" alt="Forex"
-                        tilte="Forex" />
+                    <img class="col-md-4" src="{{ asset('front/img/about/Forex_1.png') }}" alt="Forex" tilte="Forex" />
                 </div>
             </div>
         </section>
@@ -85,7 +85,7 @@
                             ETFs in the form of CFDs combine the benefits and convenience of investing in stocks and those
                             of investing in mutual funds, making them ideal for diversified portfolios.
 
-                            Moneta Market offers over 80 ETFs CFDs from the world’s leading exchanges to trade with
+                            Gestion du Patrimoine offers over 80 ETFs CFDs from the world’s leading exchanges to trade with
                             direct
                             market access exclusively on our InvestPLUS. All ETFs are set to BUY only and can be traded with
                             up to 1:5 leverage.
@@ -114,7 +114,8 @@
                             A key driver in world markets, commodities can be a highly volatile asset category and are used
                             to diversify traders’ portfolios.
 
-                            Trade long or short on both rising and falling prices with Moneta Market’ flexible leverage*,
+                            Trade long or short on both rising and falling prices with Gestion du Patrimoine’ flexible
+                            leverage*,
                             ultra-low commissions and exceptional execution speeds.
 
                             Open an account to access our award-winning platforms, professional charting tools, leading
@@ -135,8 +136,7 @@
         <section id="getstarted" class="section-bg wow fadeInUp">
             <div class="container">
                 <div class="row">
-                    <img class="col-md-4" src="{{ asset('front/img/about/Shares_1.png') }}" alt="Shares"
-                        tilte="Shares" />
+                    <img class="col-md-4" src="{{ asset('front/img/about/Shares_1.png') }}" alt="Shares" tilte="Shares" />
                     <div class="col-md-8">
                         <div class="section-header">
                             <h3 class="text-right">Shares Trading</h3>
@@ -145,16 +145,18 @@
                             Start trading shares CFDs on the world’s biggest brands, including Amazon, Facebook, Apple,
                             Microsoft and Alphabet.
 
-                            Trade long or short on both rising and falling prices with Moneta Market’ flexible leverage*,
+                            Trade long or short on both rising and falling prices with Gestion du Patrimoine’ flexible
+                            leverage*,
                             ultra-low commissions and exceptional execution speeds.
 
-                            Moneta Market offers hundreds of leading shares CFDs, from the world’s biggest exchanges to
+                            Gestion du Patrimoine offers hundreds of leading shares CFDs, from the world’s biggest exchanges
+                            to
                             trade
                             from 0.01 lots in a secure and multi-regulated environment.
 
                             While we offer over 140 most-traded share CFDs on all our online and Trader 7 platforms, you
                             can find a far larger selection of over 900 shares and ETFs on our InvestPLUS account, available
-                            exclusively on the Moneta Market Trader7.
+                            exclusively on the Gestion du Patrimoine Trader7.
                         </p>
                         <div class="text-right">
                             <a class="btn-get-started mr-auto" href="{{ route('register') }}">Start Trading Shares</a><br>
@@ -213,7 +215,7 @@
                             Bitcoin, Litecoin, Ripple and Ethereum with CFDs. Trade long or short on both rising and falling
                             prices.
 
-                            Moneta Market gives you easy access to crypto trading on award-winning mobile, web and
+                            Gestion du Patrimoine gives you easy access to crypto trading on award-winning mobile, web and
                             desktop
                             platforms, enabling you to benefit from flexible leverage*, ultra-low spreads and exceptional
                             execution speeds.

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('manage-admins', 'c-show')
+@section('madmins-li', 'active')
+@section('madmins-open', 'show')
 @section('roles', 'active')
 
 @section('content')

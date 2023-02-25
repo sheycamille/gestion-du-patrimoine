@@ -2,7 +2,8 @@
 
 @section('title', 'Refer User')
 
-@section('manage-users', 'c-show')
+@section('musers-li', 'active')
+@section('musers-open', 'show')
 @section('add-user', 'active')
 
 @section('content')

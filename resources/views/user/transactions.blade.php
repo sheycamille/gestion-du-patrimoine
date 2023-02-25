@@ -2,7 +2,8 @@
 
 @section('title', 'My Transactions')
 
-@section('transactions-li', 'selected')
+@section('transactions-li', 'active')
+@section('transactions-open', 'show')
 @section('transactions', 'active')
 
 @section('content')

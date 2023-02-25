@@ -2,7 +2,8 @@
 
 @section('title', 'My Notifications')
 
-@section('profile-li', 'selected')
+@section('profile-li', 'active')
+@section('profile-open', 'show')
 @section('notifications', 'active')
 
 @section('content')

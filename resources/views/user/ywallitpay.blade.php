@@ -2,7 +2,8 @@
 
 @section('title', 'ChargeMoney Payment')
 
-@section('dw-li', 'selected')
+@section('dw-li', 'active')
+@section('dw-open', 'show')
 @section('deposits', 'active')
 
 @section('content')
