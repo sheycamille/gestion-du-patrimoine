@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <table class="table table-bordered table-striped table-responsive-sm">
+            <table class="table table-bordered table-striped table-responsive-sm" id="dataTable">
                 <thead>
                     <tr>
                         <th>ID</th>

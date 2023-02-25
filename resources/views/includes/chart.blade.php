@@ -1,5 +1,5 @@
 <div class="col-xl-8 col-lg-7">
-    <div class="card shadow mb-4">
+    <div class="card shadow mb-4" style="height: 600px">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">Personal trading chart</h6>
             <div class="dropdown no-arrow">
@@ -18,7 +18,7 @@
                     <script type="text/javascript">
                         new TradingView.widget({
                             "width": "100%",
-                            "height": "300",
+                            "height": "500",
                             "symbol": "COINBASE:BTCUSD",
                             "interval": "1",
                             "timezone": "Etc/UTC",
@@ -44,7 +44,7 @@
 </div>
 
 <div class="col-xl-4 col-lg-5">
-    <div class="card shadow mb-4">
+    <div class="card shadow mb-4" style="height: 600px">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <h6 class="m-0 font-weight-bold text-primary">@lang('message.forex_chart')</h6>
