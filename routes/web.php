@@ -3,9 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-use Illuminate\Http\File;
-use App\Models\Setting;
-use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +21,7 @@ if (version_compare(PHP_VERSION, '7.1.0', '>=')) {
     // error_reporting(E_ALL ^ E_WARNING); // Maybe this is enough
 }
 
-//Front Pages Route
+// Front Pages Route
 Route::get('/', 'FrontController@index')->name('home');
 Route::get('about-us', 'FrontController@about')->name('about');
 Route::get('security', 'FrontController@security')->name('security');
@@ -55,6 +52,7 @@ Route::post('/send-contact-message', 'FrontController@sendContact')->name('sendc
 Route::get('dependent-dropdown', 'FrontController@fetchDependent');
 Route::get('get-state-list', 'FrontController@getStateList')->name('fetchstates');
 Route::get('get-town-list', 'FrontController@getTownList')->name('fetchtowns');
+
 
 // switch lang
 Route::get('/switch/lang/{lang}', 'FrontController@switchLang')->name('switchlang');
@@ -167,12 +165,12 @@ Route::group(['prefix' => 'admin',  'middleware' => ['isadmin', 'twofactor']], f
 // everything about admin route ends here
 
 
-
 // everything about users route starts here
 Route::get('/verify-email', 'UserController@verifyemail')->middleware('auth');
 
 // saving the ref in session and redirecting to register
 Route::get('ref/{id}', 'Controller@ref')->name('ref');
+
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
@@ -180,122 +178,144 @@ Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $requ
     return redirect('/dashboard');
 })->middleware(['auth', 'signed'])->name('verification.verify');
 
+
 Route::post('/email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
     return back()->with('message', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
+
 Route::get('/forgot-password', 'FrontController@forgotpassword')->name('password.request');
 Route::middleware(['auth'])->get('/dashboard', 'UserController@dashboard')->name('dashboard');
+
+
+//logout
+Route::get('/logout', 'UserController@perform')->name('logout.perform');
 
 Route::get('ref/{id}', 'Controller@ref')->name('ref');
 
 // Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-Route::middleware(['auth'])->group(function () {
 
+Route::prefix('userlogin')->group(function () {
     Route::post('sendcontact', 'FrontController@sendcontact')->name('enquiry');
-    Route::get('2fa', 'TwoFactorController@showTwoFactorForm')->name('2fa');
-    Route::post('2fa', 'TwoFactorController@verifyTwoFactor');
-
-    Route::prefix('dashboard')->group(function() {
-
-        // Two Factor Authentication
-        Route::post('changetheme', 'UserController@changetheme')->name('changetheme');
-        Route::get('refreshAccounts', 'UserController@refreshAccounts')->name('refreshaccounts');
-        Route::post('savedocs', 'UserController@savevdocs')->name('kycsubmit');
-
-        Route::get('skip_account', 'Controller@skip_account');
-        Route::get('tradinghistory', 'UserController@tradinghistory')->name('tradinghistory');
-        Route::get('accounthistory', 'UserController@accounthistory')->name('account.history');
-
-        // Upadating user profile info
-        Route::get('profile', 'UserController@profile')->name('account.profile');
-        Route::post('profileinfo', 'UserController@updateprofile')->name('userprofile');
-        Route::post('updatepass', 'UserController@updatepass')->name('updatepass');
-        Route::get('changepassword', 'UserController@changepassword')->name('changepassword');
-        Route::get('verify-account', 'UserController@verifyaccount')->name('account.verify');
-        Route::get('manage-account-security', 'UserController@security')->name('account.security');
-        Route::get('withdrawaldetails', 'UserController@withdrawaldetails')->name('withdrawaldetails');
-        Route::post('updatewithdrawaldetails', 'UserController@updatewithdrawaldetails')->name('updatewithdrawaldetails');
-
-        // Withdrawals & Deposits
-        Route::get('deposits', 'UserController@deposits')->name('account.deposits');
-        Route::post('paypalverify/{amount}', 'UserController@paypalverify')->name('paypalverify');
-        Route::get('withdrawals', 'UserController@withdrawals')->name('account.withdrawals');
-        Route::get('makewithdrawal', 'UserController@mwithdrawal')->name('mwithdrawal');
-        Route::post('withdrawal', 'UserController@savewithdrawal')->name('withdrawal');
-
-        Route::post('chngemail', 'UserController@chngemail');
-        Route::post('savedeposit', 'UserController@savedeposit')->name('savedeposit');
+    Route::get('resend', 'TwoFactorController@resend')->name('user-2fa-resend');
+    Route::resource('verify', 'TwoFactorController')->only(['verify', 'verify-store']);
+});
 
 
-        Route::get('support', 'UserController@support')->name('account.support');
-        Route::get('downloads', 'UserController@downloads')->name('account.downloads');
-        Route::get('referrals', 'UserController@referuser')->name('referrals');
-        Route::get('notifications', 'UserController@notification')->name('notifications');
+Route::group(['prefix' => 'dashboard',  'middleware' => ['auth', 'prevent-back-history']], function () {
 
-        Route::get('delnotif/{id}', 'UserController@delnotif')->name('delnotif');
-        Route::get('delmarket/{id}', 'UserController@delmarket');
-        Route::get('delassets/{id}', 'UserController@delassets');
+    // Two Factor Authentication
+    Route::post('changetheme', 'UserController@changetheme')->name('changetheme');
+    Route::get('refreshAccounts', 'UserController@refreshAccounts')->name('refreshaccounts');
+    Route::post('savedocs', 'UserController@savevdocs')->name('kycsubmit');
 
-        // Trader7 account mg't
-        Route::get('demo-accounts', 'T7Controller@demoaccounts')->name('account.demoaccounts');
-        Route::get('live-accounts', 'T7Controller@liveaccounts')->name('account.liveaccounts');
-        Route::post('add-account', 'T7Controller@addt7account')->name('account.addt7account'); //->middleware(['throttle:1,30']);
-        Route::get('t7-demo-deposit/{id}', 'T7Controller@demotopup')->name('account.demotopup');
-        Route::post('reset-account-password/{id}', 'T7Controller@resett7password')->name('account.resett7password');
+    Route::get('check', 'TwoFactorController@check2FA')->name('check2fa');
+
+    Route::get('skip_account', 'Controller@skip_account');
+    Route::get('tradinghistory', 'UserController@tradinghistory')->name('tradinghistory');
+    Route::get('accounthistory', 'UserController@accounthistory')->name('account.history');
 
 
-        // user deposit routes
-        Route::get('select-payment-method', 'UserController@selectPaymentMethod')->name('selectpaymentmethod');
-        Route::get('startpayment/{accountId}/{methodId}', 'UserController@startPayment')->name('startpayment');
+    // Upadating user profile info
+    Route::get('profile', 'UserController@profile')->name('account.profile');
+    Route::post('profileinfo', 'UserController@updateprofile')->name('userprofile');
+    Route::post('updatepass', 'UserController@updatepass')->name('updatepass');
+    Route::get('changepassword', 'UserController@changepassword')->name('changepassword');
+    Route::get('verify-account', 'UserController@verifyaccount')->name('account.verify');
+    Route::get('manage-account-security', 'UserController@security')->name('account.security');
+    Route::get('withdrawaldetails', 'UserController@withdrawaldetails')->name('withdrawaldetails');
+    Route::post('updatewithdrawaldetails', 'UserController@updatewithdrawaldetails')->name('updatewithdrawaldetails');
 
 
-        // paypound payments
-        Route::post('start_paypound_charge', 'UserController@startPaypoundCharge')->name('startpaypoundcharge');
-        Route::get('verify_paypound_charge', 'UserController@verifyPaypoundCharge')->name('verifypaypoundcharge');
+    // Withdrawals & Deposits
+    Route::get('deposits', 'UserController@deposits')->name('account.deposits');
+    Route::post('paypalverify/{amount}', 'UserController@paypalverify')->name('paypalverify');
+    Route::get('withdrawals', 'UserController@withdrawals')->name('account.withdrawals');
+    Route::get('makewithdrawal', 'UserController@mwithdrawal')->name('mwithdrawal');
+    Route::post('withdrawal', 'UserController@savewithdrawal')->name('withdrawal');
 
-        // paystudio payments
-        Route::post('start_paystudio_charge', 'UserController@startPayStudioCharge')->name('startpaystudiocharge');
-        Route::get('verify_paystudio_charge', 'UserController@verifyPayStudioCharge')->name('verifypaystudiocharge');
+    Route::post('chngemail', 'UserController@chngemail');
+    Route::post('savedeposit', 'UserController@savedeposit')->name('savedeposit');
 
-        // chargemoney payments
-        Route::post('start_chargemoney_charge', 'UserController@startChargeMoneyCharge')->name('startchargemoneycharge');
+    Route::get('support', 'UserController@support')->name('account.support');
+    Route::get('downloads', 'UserController@downloads')->name('account.downloads');
+    Route::get('referrals', 'UserController@referuser')->name('referrals');
+    Route::get('notifications', 'UserController@notification')->name('notifications');
 
-        // ywallitpay payments
-        Route::post('start_ywallitpay_charge', 'UserController@startYWallitPayCharge')->name('startywallitpaycharge');
-        Route::get('verify_ywallitpay_charge', 'UserController@verifyYWallitPayCharge')->name('verifyywallitpaycharge');
+    Route::get('delnotif/{id}', 'UserController@delnotif')->name('delnotif');
+    Route::get('delmarket/{id}', 'UserController@delmarket');
+    Route::get('delassets/{id}', 'UserController@delassets');
 
-        // virtualpay payments
-        Route::post('start_virtualpay_charge', 'UserController@startYWallitPayCharge')->name('startvirtualpaycharge');
-        Route::get('verify_virtualpay_charge', 'UserController@verifyYWallitPayCharge')->name('verifyvirtualpaycharge');
 
-        // authorizenet payments
-        Route::get('authorizenet_pay', 'UserController@startAuthorizeNetPay')->name('authorizenetpay');
-        Route::post('authorizenet_dopay', 'UserController@handleAuthorizeNetPay')->name('authorizenetdopay');
+    // Trader7 account mg't
+    Route::get('demo-accounts', 'T7Controller@demoaccounts')->name('account.demoaccounts');
+    Route::get('live-accounts', 'T7Controller@liveaccounts')->name('account.liveaccounts');
+    Route::post('add-account', 'T7Controller@addt7account')->name('account.addt7account'); //->middleware(['throttle:1,30']);
+    Route::get('t7-demo-deposit/{id}', 'T7Controller@demotopup')->name('account.demotopup');
+    Route::post('reset-account-password/{id}', 'T7Controller@resett7password')->name('account.resett7password');
 
-        // cashonex payments
-        Route::post('start_cashonex_charge', 'UserController@startCashonexPay')->name('startcashonexcharge');
-        Route::any('verify_cashonex_charge', 'UserController@handleCashonexPay')->name('verifycashonexcharge');
 
-        // numpay payments
-        Route::any('finalize_numpay_charge', 'UserController@finalizeNumPay')->name('finalizenumpaycharge');
-        Route::any('verify_numpay_charge', 'UserController@handleNumPay')->name('verifynumpaycharge');
+    // user deposit routes
+    Route::get('select-payment-method', 'UserController@selectPaymentMethod')->name('selectpaymentmethod');
+    Route::get('startpayment/{accountId}/{methodId}', 'UserController@startPayment')->name('startpayment');
 
-        // paycly payments
-        Route::any('start_paycly_charge', 'UserController@startPaycly')->name('startpayclycharge');
 
-        // ragapay payments
-        Route::any('success_ragapay_charge', 'UserController@successRagapay')->name('successragapaycharge');
-        Route::any('cancel_ragapay_charge', 'UserController@cancelRagapay')->name('cancelragapaycharge');
+    // paypound payments
+    Route::post('start_paypound_charge', 'UserController@startPaypoundCharge')->name('startpaypoundcharge');
+    Route::get('verify_paypound_charge', 'UserController@verifyPaypoundCharge')->name('verifypaypoundcharge');
 
-        // xpro payments
-        Route::any('success_xpro_charge', 'UserController@successRagapay')->name('successxprocharge');
-        Route::any('cancel_xpro_charge', 'UserController@cancelRagapay')->name('cancelxprocharge');
 
-        // stripe payments
-        Route::post('stripe', 'UserController@stripePost')->name('stripe.post');
-    });
+    // paystudio payments
+    Route::post('start_paystudio_charge', 'UserController@startPayStudioCharge')->name('startpaystudiocharge');
+    Route::get('verify_paystudio_charge', 'UserController@verifyPayStudioCharge')->name('verifypaystudiocharge');
+
+
+    // chargemoney payments
+    Route::post('start_chargemoney_charge', 'UserController@startChargeMoneyCharge')->name('startchargemoneycharge');
+
+
+    // ywallitpay payments
+    Route::post('start_ywallitpay_charge', 'UserController@startYWallitPayCharge')->name('startywallitpaycharge');
+    Route::get('verify_ywallitpay_charge', 'UserController@verifyYWallitPayCharge')->name('verifyywallitpaycharge');
+
+
+    // virtualpay payments
+    Route::post('start_virtualpay_charge', 'UserController@startYWallitPayCharge')->name('startvirtualpaycharge');
+    Route::get('verify_virtualpay_charge', 'UserController@verifyYWallitPayCharge')->name('verifyvirtualpaycharge');
+
+
+    // authorizenet payments
+    Route::get('authorizenet_pay', 'UserController@startAuthorizeNetPay')->name('authorizenetpay');
+    Route::post('authorizenet_dopay', 'UserController@handleAuthorizeNetPay')->name('authorizenetdopay');
+
+
+    // cashonex payments
+    Route::post('start_cashonex_charge', 'UserController@startCashonexPay')->name('startcashonexcharge');
+    Route::any('verify_cashonex_charge', 'UserController@handleCashonexPay')->name('verifycashonexcharge');
+
+
+    // numpay payments
+    Route::any('finalize_numpay_charge', 'UserController@finalizeNumPay')->name('finalizenumpaycharge');
+    Route::any('verify_numpay_charge', 'UserController@handleNumPay')->name('verifynumpaycharge');
+
+
+    // paycly payments
+    Route::any('start_paycly_charge', 'UserController@startPaycly')->name('startpayclycharge');
+
+
+    // ragapay payments
+    Route::any('success_ragapay_charge', 'UserController@successRagapay')->name('successragapaycharge');
+    Route::any('cancel_ragapay_charge', 'UserController@cancelRagapay')->name('cancelragapaycharge');
+
+
+    // xpro payments
+    Route::any('success_xpro_charge', 'UserController@successRagapay')->name('successxprocharge');
+    Route::any('cancel_xpro_charge', 'UserController@cancelRagapay')->name('cancelxprocharge');
+
+
+    // stripe payments
+    Route::post('stripe', 'UserController@stripePost')->name('stripe.post');
 });
 
 

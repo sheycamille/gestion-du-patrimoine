@@ -11,6 +11,18 @@
             </div>
             <form class="user" action="{{ route('login') }}" method="post">
                 @csrf
+
+                <div class="row">
+                    @if (Session::has('message'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: auto;">
+                            <p class="alert-message">{!! Session::get('message') !!}</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                </div>
+
                 <div class="mb-4 text-center">
                     @if (Session::has('status'))
                         <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: auto;">
@@ -30,19 +42,22 @@
                 @endif
 
                 <div class="form-group">
-                    <input type="email" class="form-control form-control-user"
-                        aria-describedby="emailHelp" placeholder="Enter Email Address..."  name="email" id="email">
+                    <input type="email" class="form-control form-control-user" aria-describedby="emailHelp"
+                        placeholder="Enter Email Address..." name="email" id="email">
                 </div>
+
                 <div class="form-group">
                     <input type="password" class="form-control form-control-user" name="password" id="password"
                         placeholder="Password">
                 </div>
+
                 <div class="form-group">
                     <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck" name="remember_me">
                         <label class="custom-control-label" for="customCheck">@lang('message.login.rmbr')</label>
                     </div>
                 </div>
+
                 <button class="btn btn-primary btn-user btn-block">
                     @lang('message.login.sign_in')
                 </button>

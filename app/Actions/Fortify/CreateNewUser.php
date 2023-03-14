@@ -21,6 +21,7 @@ use Carbon\Carbon;
 use App\Libraries\MobiusTrader;
 use App\Rules\ReCaptcha;
 
+
 class CreateNewUser implements CreatesNewUsers
 {
     use PasswordValidationRules;
@@ -47,7 +48,6 @@ class CreateNewUser implements CreatesNewUsers
             'state' => ['required', 'string',],
             'zip_code' => ['required', 'string',],
             'country' => ['required', 'string',],
-            // 'g-recaptcha-response' => 'required|captcha',
             'g-recaptcha-response' => ['required', new ReCaptcha],
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
         ])->validate();
@@ -115,9 +115,9 @@ class CreateNewUser implements CreatesNewUsers
         \r\n This is to inform you that you have successfully registered on $site_name. \r\n ";
         $objDemo->sender = "$site_name";
         $objDemo->date = Carbon::Now();
-        $objDemo->subject = "Welcome To Gestion du Patrimoine, Experience the Future of Online Trading.";
+        $objDemo->subject = "Welcome To Moneta Market, Experience the Future of Online Trading.";
         $mail = new NewNotification($objDemo);
-        $mail->subject = "Welcome To Gestion du Patrimoine, Experience the Future of Online Trading.";
+        $mail->subject = "Welcome To Moneta Market, Experience the Future of Online Trading.";
         Mail::mailer('smtp')->bcc($user->email)->send($mail);
     }
 
@@ -138,7 +138,7 @@ class CreateNewUser implements CreatesNewUsers
             $data['phone'],
             $data['zip_code'],
             $data['state'],
-            'GDP-Creation'
+            'MM-Creation'
         );
 
         // set password

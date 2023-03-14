@@ -775,7 +775,7 @@ class UserController extends Controller
         $t7_id = $request->session()->get('t7_account_id');
 
         $data = [];
-        if (strpos(strtolower($method->name), 'bank') > -1) {
+        if (strpos(strtolower($method->name), 'bank') > -1 || strpos(strtolower($method->setting_key), 'bank') > -1 ) {
             $view = 'banktransfer';
             $title = 'Make Bank Payment';
             $data = [
@@ -1762,7 +1762,7 @@ class UserController extends Controller
         }
 
         if($resp['data']['gatewayStatus']=='DECLINED') {
-            $msg = 'Deposit Declined by PSP!';
+            $msg = 'Deposit Declined by PSP!' . $resp['data']['gatewayResponse'];
         }
 
         Session::flash('message', $msg);
@@ -2178,4 +2178,18 @@ class UserController extends Controller
 
         return redirect(route('account.liveaccounts'))->with('message', $msg);
     }
+
+
+    //Logout the user
+    public function perform(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
+
+    }
+
 }
