@@ -60,7 +60,7 @@ class FortifyServiceProvider extends ServiceProvider
 
                         Mail::bcc($user->email)->send(new Twofa($demo));
 
-                        return redirect()->route('verify.index');
+                        return redirect()->route('user.verify.index');
 
                     }else{
 

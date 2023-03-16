@@ -24,7 +24,7 @@
                 @endif
             </div>
 
-            <form class="user" action="{{ route('verify.store') }}" method="post">
+            <form class="user" action="{{ route('admin.verify.check') }}" method="post">
                 @csrf
                 <div class="mb-4 text-center">
                     @if (Session::has('status'))

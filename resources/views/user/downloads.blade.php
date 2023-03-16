@@ -84,7 +84,7 @@
                             <h4 class="mb-3">@lang('message.web_mobile_apps')</h4>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <a href="https://web.gestiondupatrimoine.net" class="btn btn-primary"
+                                    <a href="https://web.monetamarket.ca" class="btn btn-primary"
                                         target="_blank">@lang('message.launch_webtrader')</a>
                                 </div>
                                 <div class="col-md-4">
