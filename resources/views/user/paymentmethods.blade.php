@@ -12,6 +12,14 @@
         }
 
         .pricing-table h2 {}
+
+        .pay-logos {
+            width: 140px;
+            height: 140px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+        }
     </style>
 @endsection
 
@@ -68,8 +76,7 @@
                                     @forelse($pmethods as $pmethod)
                                         <div class="col-lg-4 p-4">
                                             <div class="pricing-table purple">
-                                                <img width="140px" height="140px"
-                                                    style="margin-left: auto; margin-right:auto; padding-top:5px;"
+                                                <img class="pay-logos"
                                                     src="{{ asset('storage/photos/logos/' . $pmethod->logo) }}"
                                                     alt="{{ $pmethod->logo }}">
                                                 <h2 class="">{{ $pmethod->name }}</h2>
