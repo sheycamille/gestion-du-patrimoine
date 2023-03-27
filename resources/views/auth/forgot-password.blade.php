@@ -5,8 +5,34 @@
 @section('content')
     <div class="col-lg-6">
         <div class="p-5">
-            <div class="text-center">
+            <div class="d-flex">
                 <h1 class="h4 text-gray-900 mb-4">@lang('message.forgot_pass.pasreset')</h1>
+                <ul class="navbar-nav ml-auto d-flex flex-row align-items-start">
+                    <!-- Nav Item - Lang -->
+                    @if (App::getLocale() == 'en')
+                        <li class="">
+                            <a class="btn btn-sm btn-warning text-white" href="{{ route('switchlang', 'fr') }}">FR</a>
+                        </li>
+                        <li class="">
+                            <a class="btn btn-sm btn-danger text-white" href="{{ route('switchlang', 'es') }}">ES</a>
+                        </li>
+                    @elseif (App::getLocale() == 'fr')
+                        <li class="">
+                            <a class="btn btn-sm btn-success text-white" href="{{ route('switchlang', 'en') }}">EN</a>
+                        </li>
+                        <li class="">
+                            <a class="btn btn-sm btn-danger text-white" href="{{ route('switchlang', 'es') }}">ES</a>
+                        </li>
+                    @else
+                        <li class="">
+                            <a class="btn btn-sm btn-success text-white" href="{{ route('switchlang', 'en') }}">EN</a>
+                        </li>
+                        <li class="">
+                            <a class="btn btn-sm btn-primary text-white" href="{{ route('switchlang', 'FR') }}">FR</a>
+                        </li>
+                    @endif
+
+                </ul>
             </div>
             <form class="user" action="{{ route('password.email') }}" method="post">
                 @csrf

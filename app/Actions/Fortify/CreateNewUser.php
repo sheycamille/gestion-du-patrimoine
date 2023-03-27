@@ -138,7 +138,7 @@ class CreateNewUser implements CreatesNewUsers
             $data['phone'],
             $data['zip_code'],
             $data['state'],
-            'MM-Creation'
+            'GDP-Creation'
         );
 
         // set password
