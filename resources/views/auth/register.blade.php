@@ -288,7 +288,7 @@
 
                 <div class="uk-margin-small uk-width uk-inline">
                     <div class="uk-width-1-2 uk-inline">
-                        <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}"></div>
+                        <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_SECRET', '6LdmWNwkAAAAANpRfCe0_v0eobTf6Qg5sz5E3qH3') }}"></div>
                         @if ($errors->has('g-recaptcha-response'))
                             <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                         @endif
@@ -315,7 +315,8 @@
 
 @section('scripts')
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer>
+    </script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript">
         $(function() {
