@@ -9951,6 +9951,10 @@ form.user .form-control-user {
     border-radius: 10rem;
     padding: 1.5rem 1rem;
 }
+.acnt-type-select {
+    border-radius: 10rem; 
+    font-size: 0.8rem;
+}
 form.user .btn-user {
     font-size: 0.8rem;
     border-radius: 10rem;
