@@ -136,12 +136,12 @@
                     'pageLength': 100,
                 });
             });
-
-            function loadActions(id) {
-                $.get('users/getactions/' + id, function(data) {
-                    $('#actions' + id).html(data);
-                });
-            }
         });
+
+        function loadActions(id) {
+            $.get('users/getactions/' + id, function(data) {
+                $('#actions' + id).html(data);
+            });
+        }
     </script>
 @endsection

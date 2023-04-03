@@ -64,7 +64,7 @@ class HomeController extends Controller
             'blockeusers' => $blockeusers,
             'unverifiedusers' => $unverifiedusers,
         ]);
-    }
+    } 
 
 
     //Return search route for Withdrawals

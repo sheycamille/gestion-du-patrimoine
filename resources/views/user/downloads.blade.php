@@ -84,15 +84,15 @@
                             <h4 class="mb-3">@lang('message.web_mobile_apps')</h4>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <a href="https://web.monetamarket.ca" class="btn btn-primary"
+                                    <a href="https://web.monetamarket.net" class="btn btn-primary"
                                         target="_blank">@lang('message.launch_webtrader')</a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="https://play.google.com/store/apps/details?id=com.mtrader7.terminal&hl=en"
+                                    <a href="https://play.google.com/store/apps/details?id=com.mtrader7.terminal"
                                         class="btn btn-primary" target="_blank">@lang('message.body.android') </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="https://apps.apple.com/gb/app/mobiustrader-7/id1355359598"
+                                    <a href="https://apps.apple.com/app/mobiustrader-7/id1355359598"
                                         class="btn btn-primary" target="_blank">@lang('message.body.iphone')</a>
                                 </div>
                             </div>
@@ -101,15 +101,15 @@
                             <h4 class="mb-3">@lang('message.desktop_apps')</h4>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <a href="https://mobius-trader.s3.eu-north-1.amazonaws.com/"
+                                    <a href="https://mobius-trader.s3.eu-north-1.amazonaws.com/MonetaMarket/MonetaMarket-Mobius.win.exe"
                                         class="btn btn-primary">@lang('message.body.windows')</a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="https://mobius-trader.s3.eu-north-1.amazonaws.com/"
+                                    <a href="https://mobius-trader.s3.eu-north-1.amazonaws.com/MonetaMarket/MonetaMarket-Mobius.mac.dmg"
                                         class="btn btn-primary">@lang('MacOS')</a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="https://mobius-trader.s3.eu-north-1.amazonaws.com/"
+                                    <a href="https://mobius-trader.s3.eu-north-1.amazonaws.com/MonetaMarket/MonetaMarket-Mobius.linux.AppImage"
                                         class="btn btn-primary">@lang('Linux')</a>
                                 </div>
                             </div>
