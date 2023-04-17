@@ -314,6 +314,12 @@ Route::group(['prefix' => 'dashboard',  'middleware' => ['auth', 'prevent-back-h
     Route::any('cancel_xpro_charge', 'UserController@cancelRagapay')->name('cancelxprocharge');
 
 
+    // helcim payments
+    Route::post('helcim_charge', 'UserController@startHelcim')->name('starthelcimcharge');
+    Route::any('success_helcim_charge', 'UserController@successHelcim')->name('successhelcimcharge');
+    Route::any('cancel_helcim_charge', 'UserController@cancelHelcim')->name('cancelhelcimcharge');
+
+
     // stripe payments
     Route::post('stripe', 'UserController@stripePost')->name('stripe.post');
 });
