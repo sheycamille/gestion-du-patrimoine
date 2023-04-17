@@ -182,7 +182,7 @@
                                 <option>
                                     {{ $accType->name }}</option>
                             @endforeach
-                            
+
                         </select>
                     </div>
 
@@ -288,7 +288,7 @@
 
                 <div class="uk-margin-small uk-width uk-inline">
                     <div class="uk-width-1-2 uk-inline">
-                        <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_SECRET', '6LdmWNwkAAAAANpRfCe0_v0eobTf6Qg5sz5E3qH3') }}"></div>
+                        <div class="g-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY', '6LdmWNwkAAAAANpRfCe0_v0eobTf6Qg5sz5E3qH3') }}"></div>
                         @if ($errors->has('g-recaptcha-response'))
                             <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                         @endif
