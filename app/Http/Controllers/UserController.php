@@ -354,7 +354,7 @@ class UserController extends Controller
         $t7 = Trader7::find($t7_id);
 
         $resp = $this->performTransaction($t7->currency, $t7->number, $amount, 'GDP-PayPal', 'GDP-AUTOPP-'.$request->orderid, 'deposit', 'balance');
-        if(gettype($resp) !== 'integer') {
+        if($resp['status'] !== MobiusTrader::STATUS_OK) {
             return json_encode(['message' => 'Sorry an error occured, report this to support!']);
         } else {
             $t7->balance += $amount;
@@ -2219,7 +2219,7 @@ class UserController extends Controller
             $t7 = Trader7::find($t7_id);
 
             $resp = $this->performTransaction($t7->currency, $t7->number, $amount, 'GDP-Helcim', 'GDP-AUTOHELCIM-'.$data['transactionId'], 'deposit', 'balance');
-            if(gettype($resp) !== 'integer') {
+            if($resp['status'] !== MobiusTrader::STATUS_OK) {
                 return json_encode(['message' => 'Sorry an error occured, report this to support!']);
             } else {
                 $t7->balance += $amount;

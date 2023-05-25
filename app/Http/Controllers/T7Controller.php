@@ -163,7 +163,7 @@ class T7Controller extends Controller
         $resp = $this->performTransaction($t7Acc->currency, $t7Acc->number, '10000.0', 'GDP-DEMO', 'GDP-AUTO', 'deposit', 'balance');
 
         $msg = 'Your Trader7 Demo Account has been successfully topped up with $10k!';
-        if(gettype($resp) !== 'integer') {
+        if($resp['status'] !== MobiusTrader::STATUS_OK) {
             $msg = 'An error occurred, please contact support';
         } else {
             // update the local record
