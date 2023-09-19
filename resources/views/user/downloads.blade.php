@@ -88,12 +88,12 @@
                                         target="_blank">@lang('message.launch_webtrader')</a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="https://play.google.com/store/apps/details?id=com.mtrader7.terminal"
+                                    <a href="https://play.google.com/store/apps/details?id=com.freetraderprogram"
                                         class="btn btn-primary" target="_blank">@lang('message.body.android') </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="https://apps.apple.com/app/mobiustrader-7/id1355359598"
-                                        class="btn btn-primary" target="_blank">@lang('message.body.iphone')</a>
+                                    <a href="https://apps.apple.com/app/mobiustrader-7/id1355359598" class="btn btn-primary"
+                                        target="_blank">@lang('message.body.iphone')</a>
                                 </div>
                             </div>
                         </div>
